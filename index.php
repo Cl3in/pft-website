@@ -18,6 +18,22 @@ Request a Quote
 </a>
 </div>
 </section>
+<!-- <section class="bg-white py-16">
+    <div class="max-w-4xl mx-auto px-6">
+        <div class="bg-gray-100 p-8 rounded-xl shadow-lg text-center">
+
+            <h3 class="text-2xl font-bold mb-6 text-black">
+                Need Freight Delivered Safely & On Time?
+            </h3>
+
+            <a href="/pft-website/pages/contact.php"
+               class="bg-[#0A0A0A] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:opacity-90 transition">
+                Request a Quote
+            </a>
+
+        </div>
+    </div>
+</section> -->
 
 <section class="py-16">
 <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-6">

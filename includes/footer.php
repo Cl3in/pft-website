@@ -28,6 +28,66 @@
 © <?php echo date("Y"); ?> <?php echo SITE_NAME; ?>
 </div>
 </footer>
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const closeMenu = document.getElementById("closeMenu");
+const mobileMenu = document.getElementById("mobileMenu");
+const mobileOverlay = document.getElementById("mobileOverlay");
 
+const mobileServicesBtn = document.getElementById("mobileServicesBtn");
+const mobileServicesMenu = document.getElementById("mobileServicesMenu");
+const mobileServicesIcon = document.getElementById("mobileServicesIcon");
+
+
+// OPEN MENU
+menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("translate-x-full");
+    mobileOverlay.classList.remove("hidden");
+});
+
+// CLOSE MENU
+function closeMobileMenu() {
+    mobileMenu.classList.add("translate-x-full");
+    mobileOverlay.classList.add("hidden");
+}
+closeMenu.addEventListener("click", closeMobileMenu);
+mobileOverlay.addEventListener("click", closeMobileMenu);
+
+
+// ACCORDION WITH FADE + CLOSE OTHERS
+mobileServicesBtn.addEventListener("click", function () {
+
+    const isOpen = mobileServicesMenu.style.maxHeight;
+
+    // Close first (if open)
+    mobileServicesMenu.style.maxHeight = null;
+    mobileServicesMenu.classList.add("opacity-0");
+    mobileServicesIcon.classList.remove("rotate-180");
+
+    if (!isOpen) {
+        mobileServicesMenu.style.maxHeight = mobileServicesMenu.scrollHeight + "px";
+        mobileServicesMenu.classList.remove("opacity-0");
+        mobileServicesIcon.classList.add("rotate-180");
+    }
+
+});
+</script>
+<script>
+const mobileServicesBtn = document.getElementById("mobileServicesBtn");
+const mobileServicesMenu = document.getElementById("mobileServicesMenu");
+const mobileServicesIcon = document.getElementById("mobileServicesIcon");
+
+mobileServicesBtn.addEventListener("click", function () {
+
+    if (mobileServicesMenu.style.maxHeight) {
+        mobileServicesMenu.style.maxHeight = null;
+        mobileServicesIcon.classList.remove("rotate-180");
+    } else {
+        mobileServicesMenu.style.maxHeight = mobileServicesMenu.scrollHeight + "px";
+        mobileServicesIcon.classList.add("rotate-180");
+    }
+
+});
+</script>
 </body>
 </html>
