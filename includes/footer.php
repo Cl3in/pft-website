@@ -1,4 +1,4 @@
-<footer class="bg-brand text-white mt-20">
+<footer class="bg-[#1c1c1c] text-white mt-20 border-t border-[#222]">
 <div class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-3 gap-8">
 
 <div>
@@ -72,22 +72,6 @@ mobileServicesBtn.addEventListener("click", function () {
 
 });
 </script>
-<script>
-const mobileServicesBtn = document.getElementById("mobileServicesBtn");
-const mobileServicesMenu = document.getElementById("mobileServicesMenu");
-const mobileServicesIcon = document.getElementById("mobileServicesIcon");
 
-mobileServicesBtn.addEventListener("click", function () {
-
-    if (mobileServicesMenu.style.maxHeight) {
-        mobileServicesMenu.style.maxHeight = null;
-        mobileServicesIcon.classList.remove("rotate-180");
-    } else {
-        mobileServicesMenu.style.maxHeight = mobileServicesMenu.scrollHeight + "px";
-        mobileServicesIcon.classList.add("rotate-180");
-    }
-
-});
-</script>
 </body>
 </html>

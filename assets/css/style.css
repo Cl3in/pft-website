@@ -1,0 +1,20 @@
+/* Mobile logo smaller by default */
+@media (max-width: 768px) {
+  .logo-img {
+    height: 4rem; /* mobile default */
+  }
+}
+
+/* Smooth scaling for logo and header */
+.shrink-header {
+  padding-top: 0.75rem !important; /* shrinks header padding */
+  padding-bottom: 0.75rem !important;
+}
+
+.shrink-logo {
+  transform: scale(0.8); /* slightly smaller */
+}
+
+.scroll-transition {
+  transition: all 0.3s ease-in-out;
+}

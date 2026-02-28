@@ -21,7 +21,7 @@ theme:{extend:{colors:{brand:'<?php echo THEME_COLOR; ?>'}}}
 </style>
 </head>
 
-<body class="bg-gray-50">
+<body class="bg-[#141414] text-white">
 
 <!-- TOP CONTACT BAR -->
 <div class="text-white text-sm" style="background-color: #0A0A0A;">
@@ -43,9 +43,9 @@ theme:{extend:{colors:{brand:'<?php echo THEME_COLOR; ?>'}}}
 </div>
 </div>
 
-<header id="mainHeader" class="bg-white sticky top-0 z-50 border-b border-gray-100 transition-all duration-300">
+<header id="mainHeader" class="bg-[#1a1a1a] sticky top-0 z-50 border-b border-[#222] transition-all duration-300">
 
-<div id="headerInner" class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center transition-all duration-300">
+<div id="headerInner" class="relative max-w-7xl mx-auto px-6 py-5 flex justify-between items-center transition-all duration-300">
 
 <!-- BRAND -->
 <h1 class="text-3xl font-bold tracking-wide text-brand"
@@ -65,27 +65,29 @@ theme:{extend:{colors:{brand:'<?php echo THEME_COLOR; ?>'}}}
     Services <i class="fa fa-chevron-down text-xs"></i>
 </button>
 
-<div class="absolute left-0 mt-4 w-48 bg-white shadow-lg rounded
+<div class="absolute left-0 mt-4 w-48 bg-[#1f1f1f] shadow-lg rounded
             opacity-0 invisible
             group-hover:opacity-100 group-hover:visible
             transform translate-y-3 group-hover:translate-y-0
             transition-all duration-300">
 
-<a href="/pft-website/pages/services/flatbed.php" class="block px-4 py-2 hover:bg-gray-100">Flatbed</a>
-<a href="/pft-website/pages/services/stepdeck.php" class="block px-4 py-2 hover:bg-gray-100">Stepdeck</a>
-<a href="/pft-website/pages/services/reefer.php" class="block px-4 py-2 hover:bg-gray-100">Reefer</a>
+<a href="/pft-website/pages/services/flatbed.php" class="block px-4 py-2 hover:bg-[#2a2a2a]">Flatbed</a>
+<a href="/pft-website/pages/services/stepdeck.php" class="block px-4 py-2 hover:bg-[#2a2a2a]">Stepdeck</a>
+<a href="/pft-website/pages/services/reefer.php" class="block px-4 py-2 hover:bg-[#2a2a2a]">Reefer</a>
 
 </div>
 </div>
 
 <a href="/pft-website/pages/tracking.php" class="hover:text-brand transition">Tracking</a>
-<a href="/pft-website/pages/contact.php" class="hover:text-brand transition">Contact</a>
+<a href="/pft-website/pages/contact.php" class="hover:text-brand transition">Contact Us</a>
 
-<!-- STRONG REQUEST QUOTE BUTTON -->
-<a href="/pft-website/pages/contact.php"
-   class="bg-brand text-white px-6 py-2 rounded-full font-bold shadow-md 
-          hover:shadow-lg hover:scale-105 transition duration-300">
-   Request Quote
+
+
+<!-- LOGO ON RIGHT -->
+<a href="/pft-website/index.php" class="ml-4 flex items-center transition-all duration-300 ease-in-out logo-container">
+  <img src="/pft-website/assets/images/logo.png"
+       alt="Parrish Family Trucking Logo"
+       class="h-20 md:h-28 lg:h-32 w-auto object-contain transition-all duration-300 ease-in-out logo-img">
 </a>
 
 </nav>
@@ -99,7 +101,7 @@ theme:{extend:{colors:{brand:'<?php echo THEME_COLOR; ?>'}}}
 
 <!-- MOBILE MENU PANEL -->
 <div id="mobileMenu"
-     class="fixed top-0 right-0 h-full w-80 bg-white shadow-lg
+    class="fixed top-0 right-0 h-full w-80 bg-[#1a1a1a] shadow-lg
             transform translate-x-full
             transition-transform duration-500 ease-in-out
             z-50">
@@ -153,3 +155,56 @@ theme:{extend:{colors:{brand:'<?php echo THEME_COLOR; ?>'}}}
 </div>
 
 </header>
+<!-- LOGO SHRINK ON SCROLL SCRIPT -->
+<script>
+  const logoImg = document.querySelector('.logo-img');
+  const logoContainer = document.querySelector('.logo-container');
+
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 50) { // adjust scroll trigger
+      logoImg.classList.add('h-14', 'md:h-20', 'lg:h-24'); // smaller logo
+      logoContainer.classList.add('ml-2'); // optional slight shift
+    } else {
+      logoImg.classList.remove('h-14', 'md:h-20', 'lg:h-24');
+      logoContainer.classList.remove('ml-2');
+    }
+  });
+</script>
+<script>
+  const header = document.getElementById('mainHeader');
+  const headerInner = document.getElementById('headerInner');
+  const logoImg = document.querySelector('.logo-img');
+  const quoteBtn = document.querySelector('.quote-btn');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) { // adjust when shrink starts
+
+      // Shrink entire header
+      header.classList.add('shrink-header', 'scroll-transition');
+
+      // Shrink logo
+      logoImg.classList.add('shrink-logo', 'scroll-transition');
+
+      // Optional: move logo slightly for animation
+      logoImg.style.transform = 'scale(0.8) translateY(-2px)';
+
+      // Optionally shrink button slightly
+      quoteBtn.style.transform = 'scale(0.95)';
+
+    } else {
+
+      // Reset header
+      header.classList.remove('shrink-header');
+
+      // Reset logo
+      logoImg.classList.remove('shrink-logo');
+      logoImg.style.transform = 'scale(1) translateY(0)';
+
+      // Reset button
+      quoteBtn.style.transform = 'scale(1)';
+    }
+  });
+</script>
+
+</body>
+</html>
