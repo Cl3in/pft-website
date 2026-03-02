@@ -18,3 +18,13 @@
 .scroll-transition {
   transition: all 0.3s ease-in-out;
 }
+input,
+textarea {
+  color: #111 !important;
+  background-color: #fff !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #777;
+}

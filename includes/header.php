@@ -8,7 +8,7 @@
 
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
+<link rel="stylesheet" href="/pft-website/css/styles.css">
 <script>
 tailwind.config = {
 theme:{extend:{colors:{brand:'<?php echo THEME_COLOR; ?>'}}}
@@ -56,36 +56,102 @@ theme:{extend:{colors:{brand:'<?php echo THEME_COLOR; ?>'}}}
 <!-- DESKTOP NAV -->
 <nav class="hidden md:flex items-center gap-8 font-semibold relative">
 
-<a href="/pft-website/index.php" class="hover:text-brand transition">Home</a>
-<a href="/pft-website/pages/about.php" class="hover:text-brand transition">About</a>
+<!-- Home -->
+<a href="/pft-website/index.php"
+   class="flex items-center gap-2 hover:text-red-600 transition relative group">
+   <i class="fa-solid fa-house text-sm"></i>
+   <span>Home</span>
+   <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-600 transition-all group-hover:w-full"></span>
+</a>
+
+<!-- About -->
+<a href="/pft-website/pages/about.php"
+   class="flex items-center gap-2 hover:text-red-600 transition relative group">
+   <i class="fa-solid fa-building text-sm"></i>
+   <span>About</span>
+   <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-600 transition-all group-hover:w-full"></span>
+</a>
 
 <!-- SERVICES DROPDOWN -->
 <div class="relative group">
-<button class="flex items-center gap-1 hover:text-brand transition">
-    Services <i class="fa fa-chevron-down text-xs"></i>
-</button>
+  <!-- Dropdown Button -->
+  <button class="flex items-center gap-2 hover:text-red-600 transition relative">
+    <i class="fa-solid fa-truck text-sm"></i> Services 
+    <i class="fa fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+  </button>
 
-<div class="absolute left-0 mt-4 w-48 bg-[#1f1f1f] shadow-lg rounded
-            opacity-0 invisible
-            group-hover:opacity-100 group-hover:visible
-            transform translate-y-3 group-hover:translate-y-0
-            transition-all duration-300">
+  <!-- Mega menu container -->
+  <div class="absolute left-0 mt-4 w-screen max-w-6xl bg-[#1f1f1f]/95 backdrop-blur-md shadow-xl opacity-0 invisible
+              group-hover:opacity-100 group-hover:visible
+              transform translate-y-3 group-hover:translate-y-0
+              transition-all duration-300 px-8 py-6 grid grid-cols-3 gap-6">
 
-<a href="/pft-website/pages/services/flatbed.php" class="block px-4 py-2 hover:bg-[#2a2a2a]">Flatbed</a>
-<a href="/pft-website/pages/services/stepdeck.php" class="block px-4 py-2 hover:bg-[#2a2a2a]">Stepdeck</a>
-<a href="/pft-website/pages/services/reefer.php" class="block px-4 py-2 hover:bg-[#2a2a2a]">Reefer</a>
+    <!-- Column 1: Truck Types -->
+    <div>
+      <h3 class="text-lg font-semibold mb-4 text-white">Truck Types</h3>
+      <a href="/pft-website/pages/services/flatbed.php" class="flex items-center gap-2 py-2 text-gray-300 hover:text-red-500 transition">
+        <i class="fa-solid fa-trailer"></i> Flatbed
+      </a>
+      <a href="/pft-website/pages/services/stepdeck.php" class="flex items-center gap-2 py-2 text-gray-300 hover:text-red-500 transition">
+        <i class="fa-solid fa-road"></i> Stepdeck
+      </a>
+      <a href="/pft-website/pages/services/reefer.php" class="flex items-center gap-2 py-2 text-gray-300 hover:text-red-500 transition">
+        <i class="fa-solid fa-snowflake"></i> Reefer
+      </a>
+    </div>
 
+    <!-- Column 2: Special Services -->
+    <div>
+      <h3 class="text-lg font-semibold mb-4 text-white">Special Services</h3>
+      <a href="#" class="flex items-center gap-2 py-2 text-gray-300 hover:text-red-500 transition">
+        <i class="fa-solid fa-bolt"></i> Expedited
+      </a>
+      <a href="#" class="flex items-center gap-2 py-2 text-gray-300 hover:text-red-500 transition">
+        <i class="fa-solid fa-route"></i> Dedicated Routes
+      </a>
+      <a href="#" class="flex items-center gap-2 py-2 text-gray-300 hover:text-red-500 transition">
+        <i class="fa-solid fa-boxes-stacked"></i> LTL
+      </a>
+    </div>
+
+    <!-- Column 3: Resources -->
+    <div>
+      <h3 class="text-lg font-semibold mb-4 text-white">Resources</h3>
+      <a href="#" class="flex items-center gap-2 py-2 text-gray-300 hover:text-red-500 transition">
+        <i class="fa-solid fa-file-lines"></i> Safety Docs
+      </a>
+      <a href="#" class="flex items-center gap-2 py-2 text-gray-300 hover:text-red-500 transition">
+        <i class="fa-solid fa-shield-halved"></i> Compliance
+      </a>
+      <a href="#" class="flex items-center gap-2 py-2 text-gray-300 hover:text-red-500 transition">
+        <i class="fa-solid fa-user-tie"></i> Careers
+      </a>
+    </div>
+
+  </div>
 </div>
-</div>
 
-<a href="/pft-website/pages/tracking.php" class="hover:text-brand transition">Tracking</a>
-<a href="/pft-website/pages/contact.php" class="hover:text-brand transition">Contact Us</a>
+<!-- Tracking -->
+<a href="/pft-website/pages/tracking.php"
+   class="flex items-center gap-2 hover:text-red-600 transition relative group">
+   <i class="fa-solid fa-location-dot text-sm"></i>
+   <span>Tracking</span>
+   <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-600 transition-all group-hover:w-full"></span>
+</a>
+
+<!-- Contact CTA Button -->
+<!-- <a href="/pft-website/pages/contact.php"
+   class="bg-red-600 text-white px-5 py-2 rounded-lg shadow-md hover:bg-red-700 hover:shadow-lg transition">
+   Contact Us
+</a> -->
+
+</nav>
 
 
 
 <!-- LOGO ON RIGHT -->
 <a href="/pft-website/index.php" class="ml-4 flex items-center transition-all duration-300 ease-in-out logo-container">
-  <img src="/pft-website/assets/images/logo.png"
+ <img src="<?= BASE_URL ?>assets/images/logo.png"
        alt="Parrish Family Trucking Logo"
        class="h-20 md:h-28 lg:h-32 w-auto object-contain transition-all duration-300 ease-in-out logo-img">
 </a>
@@ -101,56 +167,78 @@ theme:{extend:{colors:{brand:'<?php echo THEME_COLOR; ?>'}}}
 
 <!-- MOBILE MENU PANEL -->
 <div id="mobileMenu"
-    class="fixed top-0 right-0 h-full w-80 bg-[#1a1a1a] shadow-lg
-            transform translate-x-full
-            transition-transform duration-500 ease-in-out
-            z-50">
+    class="fixed top-0 right-0 h-full w-80 bg-[#1a1a1a]/95 backdrop-blur-md shadow-xl
+           transform translate-x-full
+           transition-transform duration-500 ease-in-out
+           z-50">
 
-<div class="p-6 flex flex-col gap-6 font-semibold h-full">
+  <div class="p-6 flex flex-col gap-6 font-semibold h-full text-gray-200">
 
-<!-- Close Button -->
-<div class="flex justify-between items-center border-b pb-4">
-<span class="text-lg font-bold">Menu</span>
-<button id="closeMenu" class="text-xl">
-    <i class="fa fa-times"></i>
-</button>
-</div>
+    <!-- Close Button -->
+    <div class="flex justify-between items-center border-b pb-4">
+      <span class="text-lg font-bold text-white">Menu</span>
+      <button id="closeMenu" class="text-xl text-gray-200 hover:text-red-500">
+        <i class="fa fa-times"></i>
+      </button>
+    </div>
 
-<a href="/pft-website/index.php">Home</a>
-<a href="/pft-website/pages/about.php">About</a>
+    <!-- Links with icons -->
+    <a href="/pft-website/index.php" 
+       class="flex items-center gap-2 hover:text-red-500 transition relative <?php echo basename($_SERVER['PHP_SELF'])=='index.php'?'text-red-500 font-bold':''; ?>">
+       <i class="fa-solid fa-house"></i> Home
+       <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
+    </a>
 
-<!-- SERVICES ACCORDION -->
-<div class="border-t pt-4">
+    <a href="/pft-website/pages/about.php" 
+       class="flex items-center gap-2 hover:text-red-500 transition relative <?php echo basename($_SERVER['PHP_SELF'])=='about.php'?'text-red-500 font-bold':''; ?>">
+       <i class="fa-solid fa-building"></i> About
+    </a>
 
-<button id="mobileServicesBtn"
-        class="flex justify-between items-center w-full">
-    Services
-    <i id="mobileServicesIcon"
-       class="fa fa-chevron-down text-sm transition-transform duration-300"></i>
-</button>
+    <!-- SERVICES ACCORDION -->
+    <div class="border-t pt-4">
 
-<div id="mobileServicesMenu"
-     class="overflow-hidden max-h-0 opacity-0
-            transition-all duration-500 ease-in-out
-            flex flex-col mt-4 ml-3 gap-3 text-gray-600">
+      <button id="mobileServicesBtn"
+              class="flex justify-between items-center w-full hover:text-red-500 transition relative">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-truck"></i> Services
+          </div>
+          <i id="mobileServicesIcon"
+             class="fa fa-chevron-down text-sm transition-transform duration-300"></i>
+      </button>
 
-<a href="/pft-website/pages/services/flatbed.php">Flatbed</a>
-<a href="/pft-website/pages/services/stepdeck.php">Stepdeck</a>
-<a href="/pft-website/pages/services/reefer.php">Reefer</a>
+      <div id="mobileServicesMenu"
+           class="overflow-hidden max-h-0 opacity-0
+                  transition-all duration-500 ease-in-out
+                  flex flex-col mt-4 ml-3 gap-3 text-gray-400">
 
-</div>
+        <a href="/pft-website/pages/services/flatbed.php" class="flex items-center gap-2 hover:text-red-500">
+          <i class="fa-solid fa-trailer"></i> Flatbed
+        </a>
+        <a href="/pft-website/pages/services/stepdeck.php" class="flex items-center gap-2 hover:text-red-500">
+          <i class="fa-solid fa-road"></i> Stepdeck
+        </a>
+        <a href="/pft-website/pages/services/reefer.php" class="flex items-center gap-2 hover:text-red-500">
+          <i class="fa-solid fa-snowflake"></i> Reefer
+        </a>
 
-</div>
+      </div>
 
-<a href="/pft-website/pages/tracking.php" class="border-t pt-4">Tracking</a>
-<a href="/pft-website/pages/contact.php">Contact</a>
+    </div>
 
-<a href="/pft-website/pages/contact.php"
-   class="bg-brand text-white px-5 py-2 rounded-full text-center mt-auto">
-   Request Quote
-</a>
+    <a href="/pft-website/pages/tracking.php" class="flex items-center gap-2 border-t pt-4 hover:text-red-500">
+      <i class="fa-solid fa-location-dot"></i> Tracking
+    </a>
+    <a href="/pft-website/pages/contact.php" class="flex items-center gap-2 hover:text-red-500">
+      <i class="fa-solid fa-envelope"></i> Contact
+    </a>
 
-</div>
+    <!-- CTA Button -->
+    <a href="/pft-website/pages/contact.php"
+       class="bg-red-600 text-white px-5 py-2 rounded-full text-center mt-auto hover:bg-red-700 shadow-md transition">
+       Request Quote
+    </a>
+
+  </div>
 </div>
 </div>
 
@@ -205,6 +293,8 @@ theme:{extend:{colors:{brand:'<?php echo THEME_COLOR; ?>'}}}
     }
   });
 </script>
+
+
 
 </body>
 </html>

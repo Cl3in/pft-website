@@ -1,125 +1,39 @@
-<?php include __DIR__ . '/includes/header.php'; ?>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pft-website/includes/config.php';
+include BASE_PATH . 'includes/header.php';
+?>
 
-<section id="heroSection" class="relative h-[700px] overflow-hidden flex items-center justify-center text-white">
+<section id="heroSection"
+    class="relative overflow-hidden flex items-center justify-center text-white
+           h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
 
-<div class="absolute inset-0">
+    <!-- Slides Wrapper -->
+    <div id="heroSlides" class="relative w-full h-full"></div>
 
-    <!-- Slide 1 -->
-    <div class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-1000">
-        <img src="/pft-website/assets/images/loading.jpg"
-             class="hero-image w-full h-full object-cover">
-        <div class="hero-overlay absolute inset-0 bg-black/70"></div>
+    <!-- Left Arrow -->
+    <button id="prevSlide"
+        class="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-30 
+               text-white text-3xl sm:text-4xl opacity-70 hover:opacity-100 transition">
+        ‹
+    </button>
 
-        <div class="hero-content absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-            <h1 class="hero-title text-5xl md:text-6xl font-serif font-bold mb-6">
-                Delivering Freight Safely. On Time. Every Time.
-            </h1>
-            <p class="hero-sub text-xl md:text-2xl">
-                Reliable Nationwide Freight Solutions
-            </p>
-        </div>
+    <!-- Right Arrow -->
+    <button id="nextSlide"
+        class="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-30 
+               text-white text-3xl sm:text-4xl opacity-70 hover:opacity-100 transition">
+        ›
+    </button>
+
+    <!-- CTA Button -->
+    <div class="absolute bottom-10 sm:bottom-16 w-full flex justify-center z-30">
+        <a href="/pft-website/pages/contact.php"
+           class="bg-red-600 hover:bg-red-700 text-white 
+                  px-8 sm:px-12 py-3 sm:py-4 
+                  rounded-full text-lg font-semibold 
+                  shadow-xl hover:scale-105 transition-all duration-300">
+            Request a Quote
+        </a>
     </div>
-
-    <!-- Slide 2 -->
-    <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-        <img src="/pft-website/assets/images/stepdek5.webp"
-             class="hero-image w-full h-full object-cover">
-        <div class="hero-overlay absolute inset-0 bg-black/60"></div>
-
-        <div class="hero-content absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-            <h1 class="hero-title text-5xl md:text-6xl font-serif font-bold mb-6">
-               Powered by Experience. Driven by Excellence.
-            </h1>
-            <p class="hero-sub text-xl md:text-2xl">
-                Guarantee safe transport across every mile
-            </p>
-        </div>
-    </div>
-
-    <!-- Slide 3 -->
-    <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-        <img src="/pft-website/assets/images/stepdek6.webp"
-             class="hero-image w-full h-full object-cover">
-        <div class="hero-overlay absolute inset-0 bg-black/65"></div>
-
-        <div class="hero-content absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-            <h1 class="hero-title text-5xl md:text-6xl font-serif font-bold mb-6">
-               Consistent, scalable transport solutions tailored to business needs.
-            </h1>
-            <p class="hero-sub text-xl md:text-2xl">
-               Manufacturers. Suppliers. Distributors
-            </p>
-        </div>
-    </div>
-
-    <!-- Slide 4 -->
-        <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-        <img src="/pft-website/assets/images/flatbed1.webp"
-             class="hero-image w-full h-full object-cover">
-        <div class="hero-overlay absolute inset-0 bg-black/60"></div>
-
-        <div class="hero-content absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-            <h1 class="hero-title text-5xl md:text-6xl font-serif font-bold mb-6">
-                Freight Delivered On Time.
-            </h1>
-            <p class="hero-sub text-xl md:text-2xl">
-                Flatbed • Stepdeck • Reefer
-            </p>
-        </div>
-    </div>
-
-     <!-- Slide 5 -->
-    <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-        <img src="/pft-website/assets/images/stepdek3.webp"
-             class="hero-image w-full h-full object-cover">
-        <div class="hero-overlay absolute inset-0 bg-black/60"></div>
-
-        <div class="hero-content absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-            <h1 class="hero-title text-5xl md:text-6xl font-serif font-bold mb-6">
-                Moving What Matters Most.
-            </h1>
-            <p class="hero-sub text-xl md:text-2xl">
-                From essential goods to high-value cargo
-            </p>
-        </div>
-    </div>
-      
-        <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-        <img src="/pft-website/assets/images/stepdek7.webp"
-             class="hero-image w-full h-full object-cover">
-        <div class="hero-overlay absolute inset-0 bg-black/60"></div>
-
-        <div class="hero-content absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-            <h1 class="hero-title text-5xl md:text-6xl font-serif font-bold mb-6">
-                Whether regional deliveries or long-distance hauling
-            </h1>
-            <p class="hero-sub text-xl md:text-2xl">
-                We Handle It All
-            </p>
-        </div>
-    </div>
-
-    
-</div>
-
-<!-- ARROWS -->
-<button id="prevSlide"
-class="absolute left-6 top-1/2 -translate-y-1/2 z-30 text-white text-4xl opacity-70 hover:opacity-100 transition">
-‹
-</button>
-
-<button id="nextSlide"
-class="absolute right-6 top-1/2 -translate-y-1/2 z-30 text-white text-4xl opacity-70 hover:opacity-100 transition">
-›
-</button>
-
-<!-- CTA -->
-<div class="absolute bottom-20 w-full flex justify-center z-20">
-    <a href="/pft-website/pages/contact.php"
-       class="bg-red-600 hover:bg-red-700 text-white transition-all duration-300 px-12 py-4 rounded-full text-lg font-semibold shadow-2xl hover:scale-105">
-       Request a Quote
-    </a>
-</div>
 
 </section>
 
@@ -129,7 +43,7 @@ class="absolute right-6 top-1/2 -translate-y-1/2 z-30 text-white text-4xl opacit
     <div>
 
       <h2 class="text-4xl font-bold mb-6">About Parrish Trucking Company</h2>
-<p class="text-lg text-gray-300 leading-relaxed mb-6">
+      
 <p class="text-lg text-gray-300 leading-relaxed mb-6">
   PFT builds strong partnerships with customers who value the shipping 
   industry and understand the importance of fair compensation. In return, 
@@ -170,7 +84,7 @@ class="absolute right-6 top-1/2 -translate-y-1/2 z-30 text-white text-4xl opacit
 
     <!-- IMAGE PLACEHOLDER -->
     <div>
-      <img src="/pft-website/assets/images/flatbed5.webp"
+     <img src="<?= BASE_URL ?>assets/images/stepdek9.webp"
            class="rounded-xl shadow-2xl w-full object-cover"
            alt="Parrish Trucking Fleet">
     </div>
@@ -187,9 +101,11 @@ class="absolute right-6 top-1/2 -translate-y-1/2 z-30 text-white text-4xl opacit
 
       <!-- Flatbed -->
       <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-        <img src="/pft-website/assets/images/flatbed1.webp" class="w-full h-56 object-cover">
+        <img src="<?= BASE_URL ?>assets/images/flatbed1.webp" class="w-full h-56 object-cover">
         <div class="p-6">
-          <h3 class="text-2xl font-semibold mb-3">Flatbed Transport</h3>
+          <h3 class="text-2xl font-semibold mb-3 text-red-600">
+           Flatbed Transport
+        </h3>
           <p class="mb-4 text-gray-600">
             Secure hauling for oversized and specialized cargo.
           </p>
@@ -202,9 +118,9 @@ class="absolute right-6 top-1/2 -translate-y-1/2 z-30 text-white text-4xl opacit
 
       <!-- Stepdeck -->
       <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-        <img src="/pft-website/assets/images/stepdek5.webp" class="w-full h-56 object-cover">
+        <img src="<?= BASE_URL ?>assets/images/stepdek5.webp" class="w-full h-56 object-cover">
         <div class="p-6">
-          <h3 class="text-2xl font-semibold mb-3">Stepdeck Hauling</h3>
+          <h3 class="text-2xl font-semibold mb-3 text-red-600">Stepdeck Hauling</h3>
           <p class="mb-4 text-gray-600">
             Flexible height solutions for specialized freight.
           </p>
@@ -217,11 +133,12 @@ class="absolute right-6 top-1/2 -translate-y-1/2 z-30 text-white text-4xl opacit
 
       <!-- Reefer -->
       <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-        <img src="/pft-website/assets/images/stepdek3" class="w-full h-56 object-cover">
+       <img src="<?= BASE_URL ?>assets/images/stepdek3" class="w-full h-56 object-cover">
         <div class="p-6">
-          <h3 class="text-2xl font-semibold mb-3">Refrigerated Freight</h3>
+          <h3 class="text-2xl font-semibold mb-3 text-red-600">Refrigerated Freight</h3>
           <p class="mb-4 text-gray-600">
             Temperature-controlled transport for sensitive cargo.
+            Coming Soon
           </p>
           <a href="/pft-website/pages/services/reefer.php"
              class="text-red-600 font-semibold hover:underline">
@@ -240,33 +157,65 @@ class="absolute right-6 top-1/2 -translate-y-1/2 z-30 text-white text-4xl opacit
     <!-- Inner Box -->
 <div class="bg-white text-black rounded-2xl py-12 px-8 text-center shadow-2xl">
   
-  <h2 class="text-3xl font-bold mb-10 tracking-wide text-black">
-    Quick Access
-  </h2>
+<h2 class="text-3xl font-bold mb-10 tracking-wide text-black text-center">
+  Quick Access
+</h2>
 
-  <div class="flex flex-col md:flex-row justify-center items-center gap-8 text-xl font-semibold">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-    <a href="/pft-website/pages/tracking.php"
-       class="text-red-600 hover:text-red-700 transition border-b-2 border-transparent hover:border-red-600 pb-1">
-       Freight Tracking
-    </a>
+  <!-- Freight Tracking -->
+  <a href="/pft-website/pages/tracking.php"
+     class="group bg-white shadow-md rounded-xl p-6 flex items-center gap-4 hover:shadow-xl hover:-translate-y-1 transition duration-300">
 
-    <a href="/pft-website/pages/careers.php"
-       class="text-red-600 hover:text-red-700 transition border-b-2 border-transparent hover:border-red-600 pb-1">
-       Careers
-    </a>
+     <div class="w-12 h-12 flex items-center justify-center rounded-full bg-red-600 text-white text-xl group-hover:bg-red-700 transition">
+        <i class="fa-solid fa-truck-fast"></i>
+     </div>
 
-    <a href="/pft-website/pages/safety.php"
-       class="text-red-600 hover:text-red-700 transition border-b-2 border-transparent hover:border-red-600 pb-1">
-       Safety & Compliance
-    </a>
+     <span class="text-lg font-semibold text-gray-800 group-hover:text-red-600 transition">
+        Freight Tracking
+     </span>
+  </a>
 
-    <a href="/pft-website/pages/contact.php"
-       class="text-red-600 hover:text-red-700 transition border-b-2 border-transparent hover:border-red-600 pb-1">
-       Contact Us
-    </a>
+  <!-- Careers -->
+  <a href="/pft-website/pages/careers.php"
+     class="group bg-white shadow-md rounded-xl p-6 flex items-center gap-4 hover:shadow-xl hover:-translate-y-1 transition duration-300">
 
-  </div>
+     <div class="w-12 h-12 flex items-center justify-center rounded-full bg-red-600 text-white text-xl group-hover:bg-red-700 transition">
+        <i class="fa-solid fa-user-tie"></i>
+     </div>
+
+     <span class="text-lg font-semibold text-gray-800 group-hover:text-red-600 transition">
+        Careers
+     </span>
+  </a>
+
+  <!-- Safety -->
+  <a href="/pft-website/pages/safety.php"
+     class="group bg-white shadow-md rounded-xl p-6 flex items-center gap-4 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+
+     <div class="w-12 h-12 flex items-center justify-center rounded-full bg-red-600 text-white text-xl group-hover:bg-red-700 transition">
+        <i class="fa-solid fa-shield-halved"></i>
+     </div>
+
+     <span class="text-lg font-semibold text-gray-800 group-hover:text-red-600 transition">
+        Safety & Compliance
+     </span>
+  </a>
+
+  <!-- Contact -->
+  <a href="/pft-website/pages/contact.php"
+     class="group bg-white shadow-md rounded-xl p-6 flex items-center gap-4 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+
+     <div class="w-12 h-12 flex items-center justify-center rounded-full bg-red-600 text-white text-xl group-hover:bg-red-700 transition">
+        <i class="fa-solid fa-envelope"></i>
+     </div>
+
+     <span class="text-lg font-semibold text-gray-800 group-hover:text-red-600 transition">
+        Contact Us
+     </span>
+  </a>
+
+</div>
 
 </div>
 
@@ -370,54 +319,70 @@ class="absolute right-6 top-1/2 -translate-y-1/2 z-30 text-white text-4xl opacit
   </div>
 </section>
 
-<!-- HERO SLIDER SCRIPT -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-    const slides = document.querySelectorAll(".hero-slide");
+    const images = [
+        "/pft-website/assets/images/loading.jpg",
+        "/pft-website/assets/images/stepdek5.webp",
+        "/pft-website/assets/images/stepdek6.webp",
+        "/pft-website/assets/images/flatbed1.webp",
+        "/pft-website/assets/images/stepdek3.webp",
+        "/pft-website/assets/images/flatbed2.webp",
+        "/pft-website/assets/images/flatbed3.webp",
+        "/pft-website/assets/images/flatbed6.webp",
+        "/pft-website/assets/images/stepdek.webp",
+        "/pft-website/assets/images/stepdek1.webp",
+        "/pft-website/assets/images/stepdek2.webp",
+        "/pft-website/assets/images/stepdek9.webp",
+        "/pft-website/assets/images/stepdek8.webp",
+        "/pft-website/assets/images/flatbed.webp",
+        "/pft-website/assets/images/stepdek7.webp"
+    ];
+
     const heroSection = document.getElementById("heroSection");
+    const container = document.getElementById("heroSlides");
     const nextBtn = document.getElementById("nextSlide");
     const prevBtn = document.getElementById("prevSlide");
 
     let current = 0;
     let interval;
-    const duration = 5000;
+    const duration = 6000;
     let startX = 0;
 
-    function animateText(slide) {
-        const title = slide.querySelector(".hero-title");
-        const sub = slide.querySelector(".hero-sub");
+    // Create slides
+    images.forEach((src, index) => {
+        const slide = document.createElement("div");
+        slide.className = `absolute inset-0 transition-opacity duration-1000 ${index === 0 ? "opacity-100" : "opacity-0"}`;
 
-        title.style.opacity = "0";
-        title.style.transform = "translateY(40px)";
-        sub.style.opacity = "0";
-        sub.style.transform = "translateY(40px)";
+        slide.innerHTML = `
+            <img src="${src}" loading="lazy" 
+                 class="hero-image w-full h-full object-cover transition-transform duration-300">
+            <div class="absolute inset-0 bg-black/60"></div>
+        `;
 
-        setTimeout(() => {
-            title.style.transition = "all 0.8s ease";
-            sub.style.transition = "all 0.8s ease";
-            title.style.opacity = "1";
-            title.style.transform = "translateY(0)";
-            sub.style.opacity = "1";
-            sub.style.transform = "translateY(0)";
-        }, 200);
-    }
+        container.appendChild(slide);
+    });
+
+    const slides = container.children;
 
     function showSlide(index) {
-        slides[current].style.opacity = "0";
-        current = index;
-        slides[current].style.opacity = "1";
-        animateText(slides[current]);
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].classList.remove("opacity-100");
+            slides[i].classList.add("opacity-0");
+        }
+        slides[index].classList.remove("opacity-0");
+        slides[index].classList.add("opacity-100");
     }
 
     function nextSlide() {
-        let newIndex = (current + 1) % slides.length;
-        showSlide(newIndex);
+        current = (current + 1) % slides.length;
+        showSlide(current);
     }
 
     function prevSlide() {
-        let newIndex = (current - 1 + slides.length) % slides.length;
-        showSlide(newIndex);
+        current = (current - 1 + slides.length) % slides.length;
+        showSlide(current);
     }
 
     function startAuto() {
@@ -428,9 +393,11 @@ document.addEventListener("DOMContentLoaded", function () {
         clearInterval(interval);
     }
 
+    // Buttons
     nextBtn.addEventListener("click", nextSlide);
     prevBtn.addEventListener("click", prevSlide);
 
+    // Pause on hover
     heroSection.addEventListener("mouseenter", stopAuto);
     heroSection.addEventListener("mouseleave", startAuto);
 
@@ -445,21 +412,19 @@ document.addEventListener("DOMContentLoaded", function () {
         if (diff < -70) nextSlide();
     });
 
-    // Parallax effect
+    // Parallax
     heroSection.addEventListener("mousemove", e => {
         const images = document.querySelectorAll(".hero-image");
-        const x = (e.clientX / window.innerWidth - 0.5) * 10;
-        const y = (e.clientY / window.innerHeight - 0.5) * 10;
+        const x = (e.clientX / window.innerWidth - 0.5) * 8;
+        const y = (e.clientY / window.innerHeight - 0.5) * 8;
 
         images.forEach(img => {
             img.style.transform = `scale(1.05) translate(${x}px, ${y}px)`;
         });
     });
 
-    animateText(slides[current]);
     startAuto();
 
 });
 </script>
-
-<?php include __DIR__ . '/includes/footer.php'; ?>
+<?php include BASE_PATH . 'includes/footer.php'; ?>

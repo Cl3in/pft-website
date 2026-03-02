@@ -1,4 +1,7 @@
-<?php include __DIR__ . '/../includes/header.php'; ?>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/pft-website/includes/config.php';
+include BASE_PATH . 'includes/header.php';
+?>
 
 <section class="py-16">
 <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10">
@@ -9,9 +12,14 @@
 
 <form action="/pft-website/forms/contact-form.php" method="POST" enctype="multipart/form-data" class="space-y-4">
 
-<input name="name" required placeholder="Name" class="w-full border p-3 rounded">
-<input name="email" required placeholder="Email" class="w-full border p-3 rounded">
-<textarea name="message" required placeholder="Message" class="w-full border p-3 rounded h-32"></textarea>
+<input name="name" type="text" required placeholder="Name"
+class="w-full border border-gray-300 p-3 rounded text-black focus:outline-none focus:ring-2 focus:ring-red-600">
+
+<input name="email" type="email" required placeholder="Email"
+class="w-full border border-gray-300 p-3 rounded text-black focus:outline-none focus:ring-2 focus:ring-red-600">
+
+<textarea name="message" required placeholder="Message"
+class="w-full border border-gray-300 p-3 rounded h-32 text-black focus:outline-none focus:ring-2 focus:ring-red-600"></textarea>
 
 <input type="file" name="file" class="w-full">
 
@@ -35,4 +43,4 @@
 </div>
 </section>
 
-<?php include __DIR__ . '/../includes/footer.php'; ?>
+<?php include BASE_PATH . 'includes/footer.php'; ?>
