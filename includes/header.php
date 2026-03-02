@@ -9,6 +9,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 <link rel="stylesheet" href="/pft-website/css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
 <script>
 tailwind.config = {
 theme:{extend:{colors:{brand:'<?php echo THEME_COLOR; ?>'}}}
@@ -84,7 +85,8 @@ theme:{extend:{colors:{brand:'<?php echo THEME_COLOR; ?>'}}}
   <div class="absolute left-0 mt-4 w-screen max-w-6xl bg-[#1f1f1f]/95 backdrop-blur-md shadow-xl opacity-0 invisible
               group-hover:opacity-100 group-hover:visible
               transform translate-y-3 group-hover:translate-y-0
-              transition-all duration-300 px-8 py-6 grid grid-cols-3 gap-6">
+              transition-all duration-300 px-8 py-6 grid grid-cols-3 gap-6
+              pointer-events-auto"> <!-- fixed pointer events -->
 
     <!-- Column 1: Truck Types -->
     <div>
@@ -100,30 +102,16 @@ theme:{extend:{colors:{brand:'<?php echo THEME_COLOR; ?>'}}}
       </a>
     </div>
 
-    <!-- Column 2: Special Services -->
-    <div>
-      <h3 class="text-lg font-semibold mb-4 text-white">Special Services</h3>
-      <a href="#" class="flex items-center gap-2 py-2 text-gray-300 hover:text-red-500 transition">
-        <i class="fa-solid fa-bolt"></i> Expedited
-      </a>
-      <a href="#" class="flex items-center gap-2 py-2 text-gray-300 hover:text-red-500 transition">
-        <i class="fa-solid fa-route"></i> Dedicated Routes
-      </a>
-      <a href="#" class="flex items-center gap-2 py-2 text-gray-300 hover:text-red-500 transition">
-        <i class="fa-solid fa-boxes-stacked"></i> LTL
-      </a>
-    </div>
-
-    <!-- Column 3: Resources -->
+    <!-- Column 2: Resources -->
     <div>
       <h3 class="text-lg font-semibold mb-4 text-white">Resources</h3>
       <a href="#" class="flex items-center gap-2 py-2 text-gray-300 hover:text-red-500 transition">
         <i class="fa-solid fa-file-lines"></i> Safety Docs
       </a>
-      <a href="#" class="flex items-center gap-2 py-2 text-gray-300 hover:text-red-500 transition">
+      <a href="/pft-website/pages/safety.php" class="flex items-center gap-2 py-2 text-gray-300 hover:text-red-500 transition">
         <i class="fa-solid fa-shield-halved"></i> Compliance
       </a>
-      <a href="#" class="flex items-center gap-2 py-2 text-gray-300 hover:text-red-500 transition">
+      <a href="/pft-website/pages/careers.php" class="flex items-center gap-2 py-2 text-gray-300 hover:text-red-500 transition">
         <i class="fa-solid fa-user-tie"></i> Careers
       </a>
     </div>
@@ -132,7 +120,7 @@ theme:{extend:{colors:{brand:'<?php echo THEME_COLOR; ?>'}}}
 </div>
 
 <!-- Tracking -->
-<a href="/pft-website/pages/tracking.php"
+<a href="/pft-website/customer-portal/login.php"
    class="flex items-center gap-2 hover:text-red-600 transition relative group">
    <i class="fa-solid fa-location-dot text-sm"></i>
    <span>Tracking</span>

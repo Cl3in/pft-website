@@ -102,7 +102,7 @@ include BASE_PATH . 'includes/header.php';
 
 <!-- CERTIFICATION -->
 <section class="py-20 bg-[#0A0A0A] text-white">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+  <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
     <div>
       <h2 class="text-4xl font-extrabold mb-4">
@@ -125,14 +125,43 @@ include BASE_PATH . 'includes/header.php';
 </section>
 
 <!-- CTA -->
-<section class="py-20 bg-red-600 text-white text-center">
-  <h2 class="text-4xl font-extrabold mb-6">
-    Let’s Move Freight Together
-  </h2>
-  <a href="contact.php"
-     class="bg-white text-red-600 px-12 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition">
-     Contact Our Team
-  </a>
+<section class="py-24 bg-gray-900">
+  <div class="max-w-8xl mx-auto px-6">
+    
+    <!-- RED CONTAINER -->
+    <div class="bg-red-600 text-white rounded-3xl px-12 py-20 shadow-xl">
+      
+      <div class="grid md:grid-cols-2 items-center gap-16">
+        
+        <!-- Text -->
+        <div>
+          <h2 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+            Let’s Move Freight Together
+          </h2>
+
+          <p class="text-red-100 mb-8">
+            Strong partnerships. Reliable logistics. Long-term freight solutions.
+          </p>
+
+          <a href="contact.php"
+             class="inline-block bg-white text-red-600 px-10 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition">
+            Contact Our Team
+          </a>
+        </div>
+
+        <!-- Image -->
+        <div>
+          <img 
+            src="<?= BASE_URL ?>assets/images/our team.JPG"
+            alt="Our Team"
+            class="w-full rounded-2xl shadow-2xl object-cover">
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 </section>
 
 <?php include BASE_PATH . 'includes/footer.php'; ?>

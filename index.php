@@ -164,17 +164,23 @@ include BASE_PATH . 'includes/header.php';
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
   <!-- Freight Tracking -->
-  <a href="/pft-website/pages/tracking.php"
-     class="group bg-white shadow-md rounded-xl p-6 flex items-center gap-4 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+<?php
+$trackingLink = isset($_SESSION['customer_logged_in'])
+    ? "/pft-website/customer-portal/tracking.php"
+    : "/pft-website/customer-portal/login.php";
+?>
 
-     <div class="w-12 h-12 flex items-center justify-center rounded-full bg-red-600 text-white text-xl group-hover:bg-red-700 transition">
-        <i class="fa-solid fa-truck-fast"></i>
-     </div>
+<a href="<?= $trackingLink; ?>"
+   class="group bg-white shadow-md rounded-xl p-6 flex items-center gap-4 hover:shadow-xl hover:-translate-y-1 transition duration-300">
 
-     <span class="text-lg font-semibold text-gray-800 group-hover:text-red-600 transition">
-        Freight Tracking
-     </span>
-  </a>
+   <div class="w-12 h-12 flex items-center justify-center rounded-full bg-red-600 text-white text-xl group-hover:bg-red-700 transition">
+      <i class="fa-solid fa-truck-fast"></i>
+   </div>
+
+   <span class="text-lg font-semibold text-gray-800 group-hover:text-red-600 transition">
+      Freight Tracking
+   </span>
+</a>
 
   <!-- Careers -->
   <a href="/pft-website/pages/careers.php"
@@ -322,22 +328,24 @@ include BASE_PATH . 'includes/header.php';
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
+    const BASE_URL = "<?= BASE_URL ?>";
+
     const images = [
-        "/pft-website/assets/images/loading.jpg",
-        "/pft-website/assets/images/stepdek5.webp",
-        "/pft-website/assets/images/stepdek6.webp",
-        "/pft-website/assets/images/flatbed1.webp",
-        "/pft-website/assets/images/stepdek3.webp",
-        "/pft-website/assets/images/flatbed2.webp",
-        "/pft-website/assets/images/flatbed3.webp",
-        "/pft-website/assets/images/flatbed6.webp",
-        "/pft-website/assets/images/stepdek.webp",
-        "/pft-website/assets/images/stepdek1.webp",
-        "/pft-website/assets/images/stepdek2.webp",
-        "/pft-website/assets/images/stepdek9.webp",
-        "/pft-website/assets/images/stepdek8.webp",
-        "/pft-website/assets/images/flatbed.webp",
-        "/pft-website/assets/images/stepdek7.webp"
+        BASE_URL + "assets/images/loading.jpg",
+        BASE_URL + "assets/images/stepdek5.webp",
+        BASE_URL + "assets/images/stepdek6.webp",
+        BASE_URL + "assets/images/flatbed1.webp",
+        BASE_URL + "assets/images/stepdek3.webp",
+        BASE_URL + "assets/images/flatbed2.webp",
+        BASE_URL + "assets/images/flatbed3.webp",
+        BASE_URL + "assets/images/flatbed6.webp",
+        BASE_URL + "assets/images/stepdek.webp",
+        BASE_URL + "assets/images/stepdek1.webp",
+        BASE_URL + "assets/images/stepdek2.webp",
+        BASE_URL + "assets/images/stepdek9.webp",
+        BASE_URL + "assets/images/stepdek8.webp",
+        BASE_URL + "assets/images/flatbed.webp",
+        BASE_URL + "assets/images/stepdek7.webp"
     ];
 
     const heroSection = document.getElementById("heroSection");
