@@ -1,77 +1,71 @@
-<footer class="bg-[#1c1c1c] text-white mt-20 border-t border-[#222]">
-<div class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-3 gap-8">
+<footer class="bg-[#111111] text-white mt-20 border-t border-[#222]">
 
-<div>
-<h3 class="font-bold text-xl mb-4"><?php echo SITE_NAME; ?></h3>
-<p>Professional freight and logistics solutions nationwide.</p>
+<div class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-4 gap-10">
+
+    <!-- Column 1: Brand -->
+    <div>
+        <h3 class="text-2xl font-bold mb-4 text-red-600">
+            <?php echo SITE_NAME; ?>
+        </h3>
+        <p class="text-gray-400 leading-relaxed mb-4">
+            Family-owned freight carrier headquartered in Chattanooga, TN.
+            Delivering safe, professional, and on-time transportation solutions nationwide.
+        </p>
+        <p class="text-sm text-gray-500">
+            Veteran-Owned • Military Background • Advanced GPS Tracking
+        </p>
+    </div>
+
+    <!-- Column 2: Services -->
+    <div>
+        <h4 class="font-semibold text-lg mb-4">Services</h4>
+        <ul class="space-y-2 text-gray-400">
+            <li><a href="/pft-website/pages/services/flatbed.php" class="hover:text-red-500">Flatbed Hauling</a></li>
+            <li><a href="/pft-website/pages/services/stepdeck.php" class="hover:text-red-500">Stepdeck Hauling</a></li>
+            <li><a href="#" class="hover:text-red-500">Oversize Loads</a></li>
+            <li><a href="/pft-website/pages/services/reefer.php" class="hover:text-red-500">Refrigerated Freight (Coming Soon)</a></li>
+            <li><a href="#" class="hover:text-red-500">Local Trailer Loads</a></li>
+        </ul>
+    </div>
+
+    <!-- Column 3: Quick Links -->
+    <div>
+        <h4 class="font-semibold text-lg mb-4">Company</h4>
+        <ul class="space-y-2 text-gray-400">
+            <li><a href="/pft-website/index.php" class="hover:text-red-500">Home</a></li>
+            <li><a href="/pft-website/pages/about.php" class="hover:text-red-500">About Us</a></li>
+            <li><a href="/pft-website/pages/leadership.php" class="hover:text-red-500">Leadership</a></li>
+            <li><a href="/pft-website/pages/careers.php" class="hover:text-red-500">Careers</a></li>
+            <li><a href="/pft-website/pages/contact.php" class="hover:text-red-500">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Column 4: Contact -->
+    <div>
+        <h4 class="font-semibold text-lg mb-4">Contact</h4>
+        <p class="text-gray-400 mb-2">
+            📞 1-423-680-1299
+        </p>
+        <p class="text-gray-400 mb-2">
+            ✉ info@parrishft.com
+        </p>
+        <p class="text-gray-400 mb-4">
+            📍 Chattanooga, TN
+        </p>
+
+        <!-- Social Icons -->
+        <div class="flex gap-4 text-lg">
+            <a href="#" class="hover:text-red-500"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="hover:text-red-500"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="hover:text-red-500"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
 </div>
 
-<div>
-<h3 class="font-bold mb-4">Quick Links</h3>
-<ul class="space-y-2">
-<li><a href="/pft-website/index.php">Home</a></li>
-<li><a href="/pft-website/pages/about.php">About</a></li>
-<li><a href="/pft-website/pages/contact.php">Contact</a></li>
-</ul>
+<!-- Bottom Bar -->
+<div class="border-t border-[#222] py-6 text-center text-gray-500 text-sm">
+    © <?php echo date("Y"); ?> <?php echo SITE_NAME; ?>. All Rights Reserved.
 </div>
 
-<div>
-<h3 class="font-bold mb-4">Contact</h3>
-<p>📞 1-423-680-1299</p>
-<p>📍 Chattanooga, TN</p>
-<p>✉ info@parrishft.com</p>
-</div>
-
-</div>
-
-<div class="text-center py-4 border-t border-white/20">
-© <?php echo date("Y"); ?> <?php echo SITE_NAME; ?>
-</div>
 </footer>
-<script>
-const menuBtn = document.getElementById("menuBtn");
-const closeMenu = document.getElementById("closeMenu");
-const mobileMenu = document.getElementById("mobileMenu");
-const mobileOverlay = document.getElementById("mobileOverlay");
-
-const mobileServicesBtn = document.getElementById("mobileServicesBtn");
-const mobileServicesMenu = document.getElementById("mobileServicesMenu");
-const mobileServicesIcon = document.getElementById("mobileServicesIcon");
-
-
-// OPEN MENU
-menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.remove("translate-x-full");
-    mobileOverlay.classList.remove("hidden");
-});
-
-// CLOSE MENU
-function closeMobileMenu() {
-    mobileMenu.classList.add("translate-x-full");
-    mobileOverlay.classList.add("hidden");
-}
-closeMenu.addEventListener("click", closeMobileMenu);
-mobileOverlay.addEventListener("click", closeMobileMenu);
-
-
-// ACCORDION WITH FADE + CLOSE OTHERS
-mobileServicesBtn.addEventListener("click", function () {
-
-    const isOpen = mobileServicesMenu.style.maxHeight;
-
-    // Close first (if open)
-    mobileServicesMenu.style.maxHeight = null;
-    mobileServicesMenu.classList.add("opacity-0");
-    mobileServicesIcon.classList.remove("rotate-180");
-
-    if (!isOpen) {
-        mobileServicesMenu.style.maxHeight = mobileServicesMenu.scrollHeight + "px";
-        mobileServicesMenu.classList.remove("opacity-0");
-        mobileServicesIcon.classList.add("rotate-180");
-    }
-
-});
-</script>
-
-</body>
-</html>

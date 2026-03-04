@@ -31,8 +31,20 @@ include BASE_PATH . 'includes/header.php';
 </section>
 
 <!-- MISSION & VALUES -->
-<section class="py-20 bg-gray-900 text-white">
-  <div class="max-w-7xl mx-auto px-6">
+<section class="relative py-20 text-white overflow-hidden">
+
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img src="/pft-website/assets/images/stepdek3.webp"
+         alt="Mission Background"
+         class="w-full h-full object-cover">
+  </div>
+
+  <!-- Dark Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-6">
 
     <h2 class="text-4xl font-extrabold text-center mb-12">
       🎯 Mission & Core Values
@@ -75,7 +87,6 @@ include BASE_PATH . 'includes/header.php';
     </div>
   </div>
 </section>
-
 <!-- LEADERSHIP + SAFETY -->
 <section class="py-20 bg-[#181818] text-white">
   <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">

@@ -193,13 +193,7 @@ include BASE_PATH . 'includes/header.php';
         </a>
 
         <!-- Track -->
-<?php
-$trackLink = isset($_SESSION['customer_logged_in'])
-    ? "/pft-website/customer-portal/tracking.php"
-    : "/pft-website/customer-portal/login.php";
-?>
-
-<a href="<?= $trackLink; ?>"
+<a href="/pft-website/customer-portal/login.php?return_to=/pft-website/customer-portal/tracking.php"
    class="flex items-center gap-4 bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition group">
 
   <div class="w-14 h-14 flex items-center justify-center rounded-full bg-red-600 text-white group-hover:scale-110 transition">

@@ -3,44 +3,138 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/pft-website/includes/config.php';
 include BASE_PATH . 'includes/header.php';
 ?>
 
-<section class="py-16">
-<div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10">
+<section class="py-20 bg-[#141414] text-white">
+<div class="max-w-7xl mx-auto px-6">
 
-<!-- FORM -->
-<div class="bg-white p-8 shadow rounded">
-<h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+    <!-- Opening Sentence -->
+    <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-red-600 mb-4">Get In Touch</h2>
+        <p class="max-w-2xl mx-auto text-gray-300 text-lg leading-relaxed">
+            We’d love to hear from you. Whether you are a driver, partner,
+            or customer, Parrish Family Trucking is committed to professional,
+            responsive, and reliable communication.
+        </p>
+    </div>
 
-<form action="/pft-website/forms/contact-form.php" method="POST" enctype="multipart/form-data" class="space-y-4">
+    <div class="grid md:grid-cols-2 gap-16">
 
-<input name="name" type="text" required placeholder="Name"
-class="w-full border border-gray-300 p-3 rounded text-black focus:outline-none focus:ring-2 focus:ring-red-600">
+        <!-- FORM COLUMN -->
+        <div class="bg-[#1a1a1a] p-10 rounded-2xl shadow-xl border border-[#222]">
 
-<input name="email" type="email" required placeholder="Email"
-class="w-full border border-gray-300 p-3 rounded text-black focus:outline-none focus:ring-2 focus:ring-red-600">
+            <form method="POST" class="space-y-6">
 
-<textarea name="message" required placeholder="Message"
-class="w-full border border-gray-300 p-3 rounded h-32 text-black focus:outline-none focus:ring-2 focus:ring-red-600"></textarea>
+                <!-- Name -->
+                <input type="text" name="name" required placeholder="Full Name"
+                class="w-full border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:outline-none focus:border-red-600">
 
-<input type="file" name="file" class="w-full">
+                <!-- Email -->
+                <input type="email" name="email" required placeholder="Email Address"
+                class="w-full border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:outline-none focus:border-red-600">
 
-<button class="bg-red-600 text-white px-6 py-3 rounded w-full">Send Message</button>
+                <!-- Phone -->
+                <input type="tel" name="phone" required placeholder="Phone Number"
+                class="w-full border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:outline-none focus:border-red-600">
 
-</form>
-</div>
-
-<!-- INFO -->
+                <!-- Subject -->
+                <!-- Subject Dropdown -->
 <div>
-<h3 class="text-2xl font-bold mb-4">Contact Information</h3>
+    <select id="subjectSelect" name="subject"
+        required
+        class="w-full border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:outline-none focus:border-red-600">
 
-<p class="mb-3">📞 1-423-680-1299</p>
-<p class="mb-3">📍 4295 Cromwell Rd Ste 418 Chattanooga, TN</p>
-
-<p class="mb-2">✉ info@parrishft.com</p>
-<p class="mb-2">operations@parrishft.com</p>
-<p class="mb-2">dispatch@parrishft.com</p>
+        <option value="" disabled selected>Select Subject</option>
+        <option value="General Inquiry">General Inquiry</option>
+        <option value="Driver Application">Driver Application</option>
+        <option value="Customer Support">Customer Support</option>
+        <option value="Load Booking">Load Booking</option>
+        <option value="Partnership Opportunity">Partnership Opportunity</option>
+        <option value="Other">Other</option>
+    </select>
 </div>
 
+<!-- Other Subject Input (Hidden by Default) -->
+<div id="otherSubjectContainer" class="hidden">
+    <input type="text"
+        id="otherSubjectInput"
+        name="other_subject"
+        placeholder="Please specify subject"
+        class="w-full border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:outline-none focus:border-red-600">
+</div>
+
+                <!-- Address -->
+                <input type="text" name="address" required placeholder="Street Address"
+                class="w-full border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:outline-none focus:border-red-600">
+
+                <!-- City / State / Zip -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <input type="text" name="city" required placeholder="City"
+                    class="border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:outline-none focus:border-red-600">
+
+                    <input type="text" name="state" required placeholder="State"
+                    class="border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:outline-none focus:border-red-600">
+
+                    <input type="text" name="zip" required placeholder="Zip Code"
+                    class="border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:outline-none focus:border-red-600">
+                </div>
+
+                <!-- Message -->
+                <textarea name="message" rows="5" placeholder="Your Message"
+                class="w-full border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:outline-none focus:border-red-600"></textarea>
+
+                <!-- Submit -->
+                <button type="submit"
+                class="w-full bg-red-600 text-white py-4 rounded-full hover:bg-red-700 transition font-bold text-lg">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- CONTACT INFO COLUMN -->
+        <div class="flex flex-col justify-center space-y-6">
+
+            <h3 class="text-2xl font-bold text-red-600">Contact Information</h3>
+
+            <div class="space-y-4 text-gray-300 text-lg">
+
+                <p>📞 <strong>Phone:</strong> 1-423-680-1299</p>
+
+                <p>📍 <strong>Address:</strong><br>
+                4295 Cromwell Rd Ste 418<br>
+                Chattanooga, TN
+                </p>
+
+                <p>✉ <strong>Email:</strong><br>
+                info@parrishft.com<br>
+                operations@parrishft.com<br>
+                dispatch@parrishft.com
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
 </div>
 </section>
+
+<script>
+const subjectSelect = document.getElementById('subjectSelect');
+const otherSubjectContainer = document.getElementById('otherSubjectContainer');
+const otherSubjectInput = document.getElementById('otherSubjectInput');
+
+subjectSelect.addEventListener('change', function() {
+
+    if (this.value === 'Other') {
+        otherSubjectContainer.classList.remove('hidden');
+        otherSubjectInput.setAttribute('required', 'required');
+    } else {
+        otherSubjectContainer.classList.add('hidden');
+        otherSubjectInput.removeAttribute('required');
+    }
+
+});
+</script>
 
 <?php include BASE_PATH . 'includes/footer.php'; ?>

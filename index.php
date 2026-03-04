@@ -4,35 +4,69 @@ include BASE_PATH . 'includes/header.php';
 ?>
 
 <section id="heroSection"
-    class="relative overflow-hidden flex items-center justify-center text-white
-           h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
+    class="relative overflow-hidden text-white
+           min-h-[500px] lg:min-h-[650px]
+           flex flex-col lg:flex-row">
 
-    <!-- Slides Wrapper -->
-    <div id="heroSlides" class="relative w-full h-full"></div>
+    <!-- LEFT SIDE (20%) -->
+<div class="relative w-full lg:w-1/5
+            min-h-[220px] lg:min-h-full
+            border-r border-gray-800
+            flex items-center justify-center
+            p-8 lg:p-10
+            overflow-hidden">
 
-    <!-- Left Arrow -->
-    <button id="prevSlide"
-        class="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-30 
-               text-white text-3xl sm:text-4xl opacity-70 hover:opacity-100 transition">
-        ‹
-    </button>
+    <!-- Background Image -->
+    <img src="<?= BASE_URL ?>assets/images/flatbed1.webp"
+         class="absolute inset-0 w-full h-full object-cover
+                blur-2xl scale-125 opacity-50">
 
-    <!-- Right Arrow -->
-    <button id="nextSlide"
-        class="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-30 
-               text-white text-3xl sm:text-4xl opacity-70 hover:opacity-100 transition">
-        ›
-    </button>
+    <!-- Softer Overlay -->
+    <div class="absolute inset-0 bg-black/40"></div>
 
-    <!-- CTA Button -->
-    <div class="absolute bottom-10 sm:bottom-16 w-full flex justify-center z-30">
-        <a href="/pft-website/pages/contact.php"
-           class="bg-red-600 hover:bg-red-700 text-white 
-                  px-8 sm:px-12 py-3 sm:py-4 
-                  rounded-full text-lg font-semibold 
-                  shadow-xl hover:scale-105 transition-all duration-300">
-            Request a Quote
-        </a>
+    <!-- Logo -->
+    <a href="/pft-website/index.php" class="relative z-10">
+        <img src="<?= BASE_URL ?>assets/images/logo.png"
+             class="h-32 lg:h-40 w-auto object-contain
+                    drop-shadow-2xl hover:scale-105 transition duration-500">
+    </a>
+
+</div>
+
+    <!-- RIGHT SIDE (80%) -->
+    <div class="relative w-full lg:w-4/5
+            min-h-[350px] sm:min-h-[400px] lg:min-h-full
+            flex items-center justify-center
+            overflow-hidden">
+
+        <!-- Slides Wrapper -->
+        <div id="heroSlides" class="absolute inset-0 w-full h-full"></div>
+
+        <!-- Left Arrow -->
+        <button id="prevSlide"
+            class="absolute left-6 top-1/2 -translate-y-1/2 z-30
+                   text-white text-4xl opacity-70 hover:opacity-100 transition">
+            ‹
+        </button>
+
+        <!-- Right Arrow -->
+        <button id="nextSlide"
+            class="absolute right-6 top-1/2 -translate-y-1/2 z-30
+                   text-white text-4xl opacity-70 hover:opacity-100 transition">
+            ›
+        </button>
+
+        <!-- CTA Button -->
+        <div class="absolute bottom-12 w-full flex justify-center z-30">
+            <a href="/pft-website/pages/contact.php"
+               class="bg-red-600 hover:bg-red-700 text-white
+                      px-10 py-4
+                      rounded-full text-lg font-semibold
+                      shadow-xl hover:scale-105 transition-all duration-300">
+                Request a Quote
+            </a>
+        </div>
+
     </div>
 
 </section>
@@ -164,13 +198,7 @@ include BASE_PATH . 'includes/header.php';
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
   <!-- Freight Tracking -->
-<?php
-$trackingLink = isset($_SESSION['customer_logged_in'])
-    ? "/pft-website/customer-portal/tracking.php"
-    : "/pft-website/customer-portal/login.php";
-?>
-
-<a href="<?= $trackingLink; ?>"
+<a href="/pft-website/customer-portal/login.php?return_to=/pft-website/customer-portal/tracking.php"
    class="group bg-white shadow-md rounded-xl p-6 flex items-center gap-4 hover:shadow-xl hover:-translate-y-1 transition duration-300">
 
    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-red-600 text-white text-xl group-hover:bg-red-700 transition">
@@ -227,6 +255,94 @@ $trackingLink = isset($_SESSION['customer_logged_in'])
 
   </div>
 </section>
+
+
+<section class="bg-[#0f0f0f] py-24 px-6 relative">
+
+
+<!-- TAB STYLE TITLE -->
+<div class="flex justify-center mb-14">
+
+    <div class="relative inline-block">
+
+        <!-- Oval Background -->
+        <div class="absolute inset-0 bg-red-600 rounded-full shadow-lg"></div>
+
+        <!-- Text -->
+        <h2 class="relative z-10 text-white text-3xl md:text-4xl font-bold
+                   px-12 py-4 tracking-wide">
+            Our Fleet
+        </h2>
+
+    </div>
+
+</div>
+
+    <!-- Updated Description -->
+    <p class="text-gray-400 text-center max-w-3xl mx-auto mb-16 leading-relaxed">
+        Reliable flatbed, stepdeck and oversize load trailers engineered for performance, safety
+        and dependable nationwide hauling solutions.
+    </p>
+
+    <!-- Masonry Layout -->
+    <div id="fleetContainer" class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
+
+        <?php
+        $fleetImages = [
+            BASE_URL . "assets/images/loading.jpg",
+            BASE_URL . "assets/images/stepdek5.webp",
+            BASE_URL . "assets/images/stepdek6.webp",
+            BASE_URL . "assets/images/flatbed1.webp",
+            BASE_URL . "assets/images/stepdek3.webp",
+            BASE_URL . "assets/images/flatbed2.webp",
+            BASE_URL . "assets/images/flatbed3.webp",
+            BASE_URL . "assets/images/flatbed6.webp",
+            BASE_URL . "assets/images/stepdek.webp",
+            BASE_URL . "assets/images/stepdek1.webp",
+            BASE_URL . "assets/images/stepdek2.webp",
+            BASE_URL . "assets/images/stepdek9.webp",
+            BASE_URL . "assets/images/stepdek8.webp",
+            BASE_URL . "assets/images/flatbed.webp",
+            BASE_URL . "assets/images/stepdek7.webp"
+        ];
+
+        foreach ($fleetImages as $image) :
+        ?>
+
+        <div class="relative break-inside-avoid cursor-pointer group fleet-item opacity-0 translate-y-10 transition-all duration-700">
+
+            <img src="<?= $image; ?>"
+                 class="w-full rounded-xl shadow-lg transition duration-700 group-hover:scale-105">
+
+            <!-- Specs Overlay -->
+            <div class="absolute inset-0 bg-black/70 rounded-xl
+                        opacity-0 group-hover:opacity-100
+                        flex items-center justify-center text-white text-center
+                        transition duration-500 px-4">
+
+                <!-- <div>
+                    <h3 class="text-lg font-semibold">Equipment Specs</h3>
+                    <p class="text-sm text-gray-300 mt-2">
+                        Heavy-duty trailers built for flatbed, stepdeck & oversize freight.
+                    </p>
+                </div> -->
+
+            </div>
+
+        </div>
+
+        <?php endforeach; ?>
+
+    </div>
+
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox"
+     class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50">
+    <img id="lightboxImg" class="max-h-[90%] max-w-[90%] rounded-xl shadow-2xl">
+</div>
+
 
 <section class="py-20 bg-[#111111] text-white">
   <div class="max-w-5xl mx-auto px-6 text-center">
@@ -435,4 +551,52 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    /* Lightbox */
+    const items = document.querySelectorAll(".fleet-item img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightboxImg");
+
+    items.forEach(img => {
+        img.addEventListener("click", () => {
+            lightbox.classList.remove("hidden");
+            lightbox.classList.add("flex");
+            lightboxImg.src = img.src;
+        });
+    });
+
+    lightbox.addEventListener("click", () => {
+        lightbox.classList.add("hidden");
+        lightbox.classList.remove("flex");
+    });
+
+
+    /* Scroll Animation */
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.remove("opacity-0","translate-y-10");
+                entry.target.classList.add("opacity-100","translate-y-0");
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll(".fleet-item").forEach(el => observer.observe(el));
+
+
+    /* Auto Slider Feel (slow horizontal drift effect) */
+    const container = document.getElementById("fleetContainer");
+    let scrollAmount = 0;
+
+    setInterval(() => {
+        scrollAmount += 1;
+        container.scrollBy({ top: 0, left: 1, behavior: "smooth" });
+    }, 50);
+
+});
+</script>
+
 <?php include BASE_PATH . 'includes/footer.php'; ?>

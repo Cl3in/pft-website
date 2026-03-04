@@ -1,0 +1,418 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #f4f6f9;
+}
+
+.dashboard-wrapper {
+  display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 260px;
+  background: #0f2747;
+  color: white;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.sidebar .branding {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.sidebar .branding .logo-icon {
+  font-size: 2rem;
+}
+
+.sidebar .portal-label {
+  background: #ff6b00;
+  color: #fff;
+  margin: 10px 20px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.sidebar nav ul li a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sidebar nav ul li a .icon {
+  font-size: 1.2rem;
+}
+
+.sidebar .services {
+  margin: 20px;
+  font-size: 0.9rem;
+}
+
+.sidebar .services .service {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.sidebar .services .flatbed span {
+  color: #ff6b00;
+}
+.sidebar .services .stepdeck span {
+  color: #007bff;
+}
+.sidebar .services .reefer span {
+  color: #28a745;
+}
+
+/* update badges */
+.badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  display: inline-block;
+}
+.badge.orange {
+  background: #fff2e6;
+  color: #ff6b00;
+}
+.badge.blue {
+  background: #e0f0ff;
+  color: #007bff;
+}
+.badge.green {
+  background: #e6ffed;
+  color: #28a745;
+}
+.badge.red {
+  background: #ffe6e6;
+  color: #dc3545;
+}
+.badge.purple {
+  background: #f3e6ff;
+  color: #6f42c1;
+}
+
+/* card adjustments */
+.shipment-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.shipment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shipment-header .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.shipment-header .type-icon {
+  font-size: 1.5rem;
+}
+
+.route p {
+  margin: 6px 0;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.details-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.details-row .detail {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.note {
+  background: #fff3cd;
+  color: #856404;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.actions .btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.actions .btn.track {
+  background: #007bff;
+  color: #fff;
+}
+.actions .btn.call {
+  background: #28a745;
+  color: #fff;
+}
+.actions .btn.bol {
+  background: #6c757d;
+  color: #fff;
+}
+
+.po-number {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 0.85rem;
+  color: #999;
+}
+
+/* small text change already added above */
+
+/* mobile quick nav only */
+@media (min-width: 768px) {
+  section.py-12 {
+    display: none;
+  }
+}
+
+.sidebar .logo {
+  padding: 20px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar {
+  overflow-y: auto;
+}
+
+.sidebar nav ul li:hover,
+.sidebar nav ul li.active {
+  background: #666;
+}
+
+.sidebar-footer {
+  padding: 20px;
+  background: #091a30;
+}
+
+/* MAIN */
+.main-content {
+  margin-left: 260px;
+  padding: 20px;
+  width: 100%;
+}
+
+/* TOPBAR */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar .notification {
+  background: #ff6b00;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+
+.topbar .user {
+  width: 32px;
+  height: 32px;
+  background: #ff6b00;
+  border-radius: 50%;
+}
+
+/* HERO */
+.welcome-banner {
+  background: url("../images/hero/truck.jpg") no-repeat center center;
+  background-size: cover;
+  border-radius: 15px;
+  margin: 20px 0;
+  position: relative;
+  height: 200px;
+}
+
+.welcome-banner .overlay {
+  background: linear-gradient(
+    90deg,
+    rgba(15, 39, 71, 0.9),
+    rgba(15, 39, 71, 0.2)
+  );
+  height: 100%;
+  border-radius: 15px;
+  padding: 30px;
+  color: white;
+}
+
+.badges span {
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.badges .danger {
+  background: #ff4d4d;
+}
+
+/* STATS */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.stat-card.orange {
+  border-top: 4px solid #ff6b00;
+}
+.stat-card.blue {
+  border-top: 4px solid #007bff;
+}
+.stat-card.green {
+  border-top: 4px solid #28a745;
+}
+.stat-card.red {
+  border-top: 4px solid #dc3545;
+}
+
+/* SHIPMENTS */
+.shipments {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.shipment-card {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.shipment-card small {
+  display: block;
+  color: #666;
+  margin-top: 4px;
+  font-size: 0.9rem;
+}
+
+.badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.badge.blue {
+  background: #e0f0ff;
+  color: #007bff;
+}
+.badge.gray {
+  background: #fff2e6;
+  color: #666;
+}
+
+.progress {
+  height: 6px;
+  background: #eee;
+  border-radius: 10px;
+  margin-top: 8px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #007bff;
+  border-radius: 10px;
+}
+
+.orange-bar {
+  background: #666;
+}
+.logout-btn {
+  display: block;
+  margin-top: 15px;
+  padding: 10px;
+  text-align: center;
+  background: #dc2626;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: #b91c1c;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.sidebar nav {
+  flex: 1;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 20px;
+}
+.logout-btn {
+  display: block;
+  margin-top: 15px;
+  padding: 12px;
+  text-align: center;
+  background: #dc2626;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.logout-btn:hover {
+  background: #b91c1c;
+}
