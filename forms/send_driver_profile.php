@@ -111,21 +111,7 @@ $city, $state $zip
 SMTP MAIL CONFIGURATION
 ----------------------------- */
 
-$mail = new PHPMailer(true);
 
-try {
-
-    $mail->isSMTP();
-    $mail->Host       = 'parrishft.com';
-    $mail->SMTPAuth   = true;
-
-    $mail->Username   = 'operations@parrishft.com';
-    $mail->Password   = 'PftNov20@#$';
-
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-    $mail->Port       = 465;
-
-    $mail->CharSet    = "UTF-8";
 
     /* EMAIL SETTINGS */
 

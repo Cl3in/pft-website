@@ -164,17 +164,6 @@ try{
 
     /* SMTP SETTINGS */
 
-    $mail->isSMTP();
-    $mail->Host       = 'mail.parrishft.com';
-    $mail->SMTPAuth   = true;
-
-    $mail->Username   = 'operations@parrishft.com';
-    $mail->Password   = 'PftNov20@#$';
-
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-    $mail->Port       = 465;
-
-    $mail->CharSet    = "UTF-8";
 
 
     /* EMAIL DETAILS */
