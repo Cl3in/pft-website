@@ -92,29 +92,47 @@ include BASE_PATH . 'includes/header.php';
         </div>
 
         <!-- CONTACT INFO COLUMN -->
-        <div class="flex flex-col justify-center space-y-6">
+       <div class="relative flex flex-col justify-center space-y-6 p-8 rounded-xl overflow-hidden shadow-2xl border border-gray-800">
 
-            <h3 class="text-2xl font-bold text-red-600">Contact Information</h3>
+    <!-- Background Image -->
+    <div class="absolute inset-0 bg-cover bg-center opacity-80"
+         style="background-image:url('<?= BASE_URL . "assets/images/flatbed5.webp" ?>');">
+    </div>
 
-            <div class="space-y-4 text-gray-300 text-lg">
+    <!-- Gradient Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/40"></div>
 
-                <p>📞 <strong>Phone:</strong> 1-423-680-1299</p>
+    <!-- Content -->
+    <div class="relative z-10 bg-black/40 backdrop-blur-sm p-6 rounded-lg">
 
-                <p>📍 <strong>Address:</strong><br>
+        <h3 class="text-2xl font-bold text-red-600 drop-shadow-lg">
+            Contact Information
+        </h3>
+
+        <div class="space-y-4 text-gray-100 text-lg mt-4 font-medium">
+
+            <p class="drop-shadow-md">
+                📞 <strong>Phone:</strong> 1-423-680-1299
+            </p>
+
+            <p class="drop-shadow-md">
+                📍 <strong>Address:</strong><br>
                 4295 Cromwell Rd Ste 418<br>
                 Chattanooga, TN
-                </p>
+            </p>
 
-                <p>✉ <strong>Email:</strong><br>
+            <p class="drop-shadow-md">
+                ✉ <strong>Email:</strong><br>
                 info@parrishft.com<br>
                 operations@parrishft.com<br>
                 dispatch@parrishft.com
-                </p>
-
-            </div>
+            </p>
 
         </div>
 
+    </div>
+
+</div>s
     </div>
 </div>
 </section>

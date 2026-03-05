@@ -71,6 +71,118 @@ include BASE_PATH . 'includes/header.php';
 
 </section>
 
+<section class="py-24 relative overflow-hidden">
+
+<!-- BACKGROUND IMAGE -->
+<div class="absolute inset-0">
+    <img src="<?= BASE_URL ?>assets/images/stepdek3.webp"
+         alt="Background"
+    class="w-full h-full object-cover blur-1xl opacity-20 scale-110">
+</div>
+
+<!-- SOFT DARK OVERLAY -->
+<div class="absolute inset-0 bg-black/70"></div>
+
+<div class="relative max-w-7xl mx-auto px-6">
+
+<div class="flex flex-col lg:flex-row items-center lg:items-start justify-start gap-12 lg:gap-24">
+  <!-- CARD -->
+<div class="bg-white shadow-2xl rounded-xl overflow-hidden w-[420px]">
+
+<div class="grid grid-cols-2">
+
+<!-- LEFT IMAGES -->
+<div class="flex flex-col">
+
+<img src="<?= BASE_URL ?>assets/images/stepdek3.webp"
+class="h-52 w-full object-cover"
+alt="Flatbed Transport">
+
+<img src="<?= BASE_URL ?>assets/images/flatbed1.webp"
+class="h-52 w-full object-cover bg-black p-4"
+alt="Parrish Family Trucking Logo">
+
+</div>
+
+<!-- RIGHT CONTENT -->
+<div class="p-6 text-sm">
+
+<h2 class="text-lg font-bold text-red-600 mb-4 tracking-wider">
+TRANSPORTATION
+</h2>
+
+<h3 class="text-sm font-semibold text-red-600 mb-3">
+OUR SERVICES
+</h3>
+
+<ul class="text-gray-700 space-y-1 mb-4">
+<li>Flatbed</li>
+<li>Stepdeck</li>
+<li>Oversize / Wide Load</li>
+<li>Power Only</li>
+</ul>
+
+<p class="text-gray-600 mb-3 text-xs leading-relaxed">
+Parrish Family Trucking uses <strong>Verizon Reveal Connect Fleet
+Management</strong> for dispatching, tracking deliveries, driver
+efficiency monitoring, and integrated camera safety systems.
+</p>
+
+<p class="text-gray-600 mb-4 text-xs">
+Member of the <strong>National Association of Small Trucking
+Companies (NASTC)</strong>.
+</p>
+
+<div class="flex items-center gap-4 mb-4">
+
+<a href="https://www.verizonconnect.com" target="_blank">
+<img src="<?= BASE_URL ?>assets/images/verizon-connect.png"
+class="h-7">
+</a>
+
+<a href="https://nastc.com" target="_blank">
+<img src="<?= BASE_URL ?>assets/images/nastc.png"
+class="h-7">
+</a>
+
+</div>
+
+<div class="text-gray-700 text-xs leading-relaxed">
+<p><strong>DOT #</strong> 3549816</p>
+<p><strong>D-U-N-S #</strong> 12-829-9945</p>
+</div>
+
+</div>
+
+</div>
+</div>
+<!-- END CARD -->
+
+<!-- RIGHT SIDE TEXT -->
+<div class="max-w-2xl text-white">
+
+<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+Ready to Move Your Freight?<br>
+Partner With a Team You Can Trust.
+</h2>
+
+
+
+<ul class="space-y-3 text-gray-200 text-lg">
+<li>✔ Safe & Reliable Freight Delivery</li>
+<li>✔ Real-Time Shipment Tracking</li>
+<li>✔ Advanced Fleet Technology</li>
+<li>✔ Professional Dispatch & Logistics</li>
+</ul>
+
+</div>
+
+</div>
+</div>
+
+</section>
+
+
 <section class="py-20 bg-[#181818] text-white">
   <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
@@ -185,77 +297,90 @@ include BASE_PATH . 'includes/header.php';
   </div>
 </section>
 
-<section class="py-16 bg-[#1a1a1a]">
-  <div class="max-w-6xl mx-auto px-6">
+<section class="relative py-16 overflow-hidden">
 
-    <!-- Inner Box -->
-<div class="bg-white text-black rounded-2xl py-12 px-8 text-center shadow-2xl">
-  
+<!-- Background Image -->
+<div class="absolute inset-0">
+  <img src="<?= BASE_URL ?>assets/images/stepdek6.webp"
+       alt="Freight Truck"
+       class="w-full h-full object-cover">
+</div>
+
+<!-- Dark Overlay -->
+<div class="absolute inset-0 bg-black/70"></div>
+
+<div class="relative z-10 max-w-6xl mx-auto px-6">
+
+<!-- Inner Box -->
+<div class="bg-white/95 backdrop-blur-md text-black rounded-2xl py-12 px-8 text-center shadow-2xl">
+
 <h2 class="text-3xl font-bold mb-10 tracking-wide text-black text-center">
   Quick Access
 </h2>
 
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-  <!-- Freight Tracking -->
+<!-- Freight Tracking -->
 <a href="/pft-website/customer-portal/login.php?return_to=/pft-website/customer-portal/tracking.php"
    class="group bg-white shadow-md rounded-xl p-6 flex items-center gap-4 hover:shadow-xl hover:-translate-y-1 transition duration-300">
 
-   <div class="w-12 h-12 flex items-center justify-center rounded-full bg-red-600 text-white text-xl group-hover:bg-red-700 transition">
-      <i class="fa-solid fa-truck-fast"></i>
-   </div>
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-red-600 text-white text-xl group-hover:bg-red-700 transition">
+<i class="fa-solid fa-truck-fast"></i>
+</div>
 
-   <span class="text-lg font-semibold text-gray-800 group-hover:text-red-600 transition">
-      Freight Tracking
-   </span>
+<span class="text-lg font-semibold text-gray-800 group-hover:text-red-600 transition">
+Freight Tracking
+</span>
+
 </a>
 
-  <!-- Careers -->
-  <a href="/pft-website/pages/careers.php"
-     class="group bg-white shadow-md rounded-xl p-6 flex items-center gap-4 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+<!-- Careers -->
+<a href="/pft-website/pages/careers.php"
+class="group bg-white shadow-md rounded-xl p-6 flex items-center gap-4 hover:shadow-xl hover:-translate-y-1 transition duration-300">
 
-     <div class="w-12 h-12 flex items-center justify-center rounded-full bg-red-600 text-white text-xl group-hover:bg-red-700 transition">
-        <i class="fa-solid fa-user-tie"></i>
-     </div>
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-red-600 text-white text-xl group-hover:bg-red-700 transition">
+<i class="fa-solid fa-user-tie"></i>
+</div>
 
-     <span class="text-lg font-semibold text-gray-800 group-hover:text-red-600 transition">
-        Careers
-     </span>
-  </a>
+<span class="text-lg font-semibold text-gray-800 group-hover:text-red-600 transition">
+Careers
+</span>
 
-  <!-- Safety -->
-  <a href="/pft-website/pages/safety.php"
-     class="group bg-white shadow-md rounded-xl p-6 flex items-center gap-4 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+</a>
 
-     <div class="w-12 h-12 flex items-center justify-center rounded-full bg-red-600 text-white text-xl group-hover:bg-red-700 transition">
-        <i class="fa-solid fa-shield-halved"></i>
-     </div>
+<!-- Safety -->
+<a href="/pft-website/pages/safety.php"
+class="group bg-white shadow-md rounded-xl p-6 flex items-center gap-4 hover:shadow-xl hover:-translate-y-1 transition duration-300">
 
-     <span class="text-lg font-semibold text-gray-800 group-hover:text-red-600 transition">
-        Safety & Compliance
-     </span>
-  </a>
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-red-600 text-white text-xl group-hover:bg-red-700 transition">
+<i class="fa-solid fa-shield-halved"></i>
+</div>
 
-  <!-- Contact -->
-  <a href="/pft-website/pages/contact.php"
-     class="group bg-white shadow-md rounded-xl p-6 flex items-center gap-4 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+<span class="text-lg font-semibold text-gray-800 group-hover:text-red-600 transition">
+Safety & Compliance
+</span>
 
-     <div class="w-12 h-12 flex items-center justify-center rounded-full bg-red-600 text-white text-xl group-hover:bg-red-700 transition">
-        <i class="fa-solid fa-envelope"></i>
-     </div>
+</a>
 
-     <span class="text-lg font-semibold text-gray-800 group-hover:text-red-600 transition">
-        Contact Us
-     </span>
-  </a>
+<!-- Contact -->
+<a href="/pft-website/pages/contact.php"
+class="group bg-white shadow-md rounded-xl p-6 flex items-center gap-4 hover:shadow-xl hover:-translate-y-1 transition duration-300">
 
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-red-600 text-white text-xl group-hover:bg-red-700 transition">
+<i class="fa-solid fa-envelope"></i>
+</div>
+
+<span class="text-lg font-semibold text-gray-800 group-hover:text-red-600 transition">
+Contact Us
+</span>
+
+</a>
+
+</div>
 </div>
 
 </div>
-
-  </div>
 </section>
-
 
 <section class="bg-[#0f0f0f] py-24 px-6 relative">
 
