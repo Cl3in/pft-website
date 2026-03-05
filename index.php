@@ -137,12 +137,12 @@ Companies (NASTC)</strong>.
 
 <a href="https://www.verizonconnect.com" target="_blank">
 <img src="<?= BASE_URL ?>assets/images/verizon-connect.png"
-class="h-7">
+ class="h-20 w-auto object-contain">
 </a>
 
 <a href="https://nastc.com" target="_blank">
 <img src="<?= BASE_URL ?>assets/images/nastc.png"
-class="h-7">
+ class="h-20 w-40 object-contain">
 </a>
 
 </div>
@@ -418,7 +418,6 @@ Contact Us
             BASE_URL . "assets/images/stepdek5.webp",
             BASE_URL . "assets/images/stepdek6.webp",
             BASE_URL . "assets/images/flatbed1.webp",
-            BASE_URL . "assets/images/stepdek3.webp",
             BASE_URL . "assets/images/flatbed2.webp",
             BASE_URL . "assets/images/flatbed3.webp",
             BASE_URL . "assets/images/flatbed6.webp",

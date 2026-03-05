@@ -240,32 +240,84 @@ transform translate-x-full transition-transform duration-500 z-50">
 <button id="closeMenu"><i class="fa fa-times"></i></button>
 </div>
 
-<a href="/pft-website/index.php">Home</a>
-<a href="/pft-website/pages/about.php">About</a>
+<a href="/pft-website/index.php" class="flex items-center gap-3">
+<i class="fa-solid fa-house text-sm"></i>
+Home
+</a>
 
-<button id="mobileServicesBtn" class="flex justify-between items-center">
-<span><i class="fa fa-truck"></i> Services</span>
+<a href="/pft-website/pages/about.php" class="flex items-center gap-3">
+<i class="fa-solid fa-building text-sm"></i>
+About
+</a>
+
+
+<button id="mobileServicesBtn" class="flex justify-between items-center w-full">
+<span class="flex items-center gap-3">
+<i class="fa-solid fa-truck text-sm"></i>
+Services
+</span>
 <i id="mobileServicesIcon" class="fa fa-chevron-down transition-transform"></i>
 </button>
 
-<div id="mobileServicesMenu" class="overflow-hidden max-h-0 opacity-0 transition-all flex flex-col ml-3 gap-2">
-<a href="/pft-website/pages/services/flatbed.php">Flatbed</a>
-<a href="/pft-website/pages/services/stepdeck.php">Stepdeck</a>
-<a href="/pft-website/pages/services/reefer.php">Reefer</a>
+
+<div id="mobileServicesMenu" class="overflow-hidden max-h-0 opacity-0 transition-all flex flex-col ml-6 gap-3">
+
+<a href="/pft-website/pages/services/flatbed.php" class="flex items-center gap-3">
+<i class="fa-solid fa-trailer text-sm"></i>
+Flatbed
+</a>
+
+<a href="/pft-website/pages/services/stepdeck.php" class="flex items-center gap-3">
+<i class="fa-solid fa-road text-sm"></i>
+Stepdeck
+</a>
+
+<a href="/pft-website/pages/services/wideload.php" class="flex items-center gap-3">
+<i class="fa-solid fa-arrows-left-right text-sm"></i>
+Wide Load
+</a>
+
+<a href="/pft-website/pages/services/reefer.php" class="flex items-center gap-3">
+<i class="fa-solid fa-snowflake text-sm"></i>
+Reefer
+</a>
+
 </div>
 
-<button id="mobileResourcesBtn" class="flex justify-between items-center">
-<span><i class="fa fa-folder-open"></i> Resources</span>
+
+<button id="mobileResourcesBtn" class="flex justify-between items-center w-full">
+<span class="flex items-center gap-3">
+<i class="fa-solid fa-folder-open text-sm"></i>
+Resources
+</span>
 <i id="mobileResourcesIcon" class="fa fa-chevron-down transition-transform"></i>
 </button>
 
-<div id="mobileResourcesMenu" class="overflow-hidden max-h-0 opacity-0 transition-all flex flex-col ml-3 gap-2">
-<a href="/pft-website/pages/safety.php">Compliance</a>
-<a href="/pft-website/pages/careers.php">Careers</a>
+
+<div id="mobileResourcesMenu" class="overflow-hidden max-h-0 opacity-0 transition-all flex flex-col ml-6 gap-3">
+
+<a href="/pft-website/pages/safety.php" class="flex items-center gap-3">
+<i class="fa-solid fa-shield-halved text-sm"></i>
+Compliance
+</a>
+
+<a href="<?= $headerTrackingUrl ?>" class="flex items-center gap-3">
+<i class="fa-solid fa-location-dot text-sm"></i>
+Tracking
+</a>
+
 </div>
 
-<a href="<?= $headerTrackingUrl ?>">Tracking</a>
-<a href="/pft-website/pages/contact.php">Contact</a>
+
+<a href="/pft-website/pages/careers.php" class="flex items-center gap-3">
+<i class="fa-solid fa-briefcase text-sm"></i>
+Employment
+</a>
+
+<a href="/pft-website/pages/contact.php" class="flex items-center gap-3">
+<i class="fa-solid fa-envelope text-sm"></i>
+Contact Us
+</a>
 
 <a href="/pft-website/pages/contact.php" class="bg-red-600 text-white px-5 py-2 rounded-full text-center mt-auto">Request Quote</a>
 

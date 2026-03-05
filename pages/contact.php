@@ -10,9 +10,9 @@ include BASE_PATH . 'includes/header.php';
     <div class="text-center mb-16">
         <h2 class="text-4xl font-bold text-red-600 mb-4">Get In Touch</h2>
         <p class="max-w-2xl mx-auto text-gray-300 text-lg leading-relaxed">
-            We’d love to hear from you. Whether you are a driver, partner,
-            or customer, Parrish Family Trucking is committed to professional,
-            responsive, and reliable communication.
+            We’d love to hear from you. Whether you are a driver, partner
+            or customer. Parrish Family Trucking is committed to professional,
+            responsive and reliable communication.
         </p>
     </div>
 
@@ -121,18 +121,16 @@ include BASE_PATH . 'includes/header.php';
                 Chattanooga, TN
             </p>
 
-            <p class="drop-shadow-md">
-                ✉ <strong>Email:</strong><br>
-                info@parrishft.com<br>
-                operations@parrishft.com<br>
-                dispatch@parrishft.com
-            </p>
+            <a href="mailto:info@parrishft.com?subject=Inquiry from Website"
+   class="text-red-600 hover:text-red-400 transition font-semibold">
+   info@parrishft.com
+</a>
 
         </div>
 
     </div>
 
-</div>s
+</div>
     </div>
 </div>
 </section>
