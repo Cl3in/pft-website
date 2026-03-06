@@ -27,19 +27,21 @@ tailwind.config = {
 <body class="bg-[#141414] text-white">
 
 <!-- TOP CONTACT BAR -->
-<div class="text-white text-sm" style="background-color:#0A0A0A;">
-<div class="relative max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
-      <div class="flex gap-6">
-      <span><i class="fa fa-phone"></i> 1-423-680-1299</span>
-      <span><i class="fa fa-envelope"></i> info@parrishft.com</span>
-      <span class="hidden md:block"><i class="fa fa-location-dot"></i> Chattanooga, TN</span>
-    </div>
-    <div class="flex gap-4">
-      <i class="fab fa-facebook"></i>
-      <i class="fab fa-twitter"></i>
-      <i class="fab fa-linkedin"></i>
-      <i class="fab fa-instagram"></i>
-    </div>
+<div class="text-white text-sm bg-[#0A0A0A]">
+  <div class="max-w-7xl mx-auto px-6 py-2 flex justify-end items-center gap-10">
+
+    <!-- Phone -->
+    <a href="tel:+14236801299" class="flex items-center gap-2 hover:text-red-500 transition">
+      <i class="fa fa-phone text-red-600"></i>
+      1-423-680-1299
+    </a>
+
+    <!-- Email -->
+    <a href="mailto:info@parrishft.com" class="flex items-center gap-2 hover:text-red-500 transition">
+      <i class="fa fa-envelope text-red-600"></i>
+      info@parrishft.com
+    </a>
+
   </div>
 </div>
 
@@ -58,146 +60,20 @@ tailwind.config = {
 <a href="/pft-website/index.php" class="flex items-center gap-2 hover:text-red-600 transition group">
 <i class="fa-solid fa-house text-sm"></i> Home
 </a>
-
-<div class="relative group">
-
-    <!-- Trigger -->
-    <button id="aboutBtn"
-        class="flex items-center gap-2 hover:text-red-600 transition">
-        <i class="fa-solid fa-building text-sm"></i> About
-        <i class="fa fa-chevron-down text-xs group-hover:rotate-180 transition-transform duration-300"></i>
-    </button>
-
-    <!-- Info Card -->
-    <div id="aboutCard"
-        class="absolute left-1/2 -translate-x-1/2 mt-6
-               w-[90vw] max-w-3xl
-               opacity-0 invisible translate-y-6
-               group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
-               transition-all duration-500 ease-out
-               z-50">
-
-        <div class="relative overflow-hidden rounded-2xl shadow-2xl">
-
-            <!-- Blurred Background -->
-            <img src="<?= BASE_URL ?>assets/images/flatbed2.webp"
-                 class="absolute inset-0 w-full h-full object-cover blur-2xl scale-110 opacity-25">
-
-            <div class="absolute inset-0 bg-[#1f1f1f]/95 backdrop-blur-md"></div>
-
-            <!-- Content -->
-            <div class="relative px-10 py-8 text-gray-300 leading-relaxed text-sm md:text-base">
-
-                <p>
-                Parrish Family Trucking is headquartered in Chattanooga, TN and
-                offers personalized and professional customer interactions,
-                on-time delivery, safe and secure transportation, and reasonable
-                rates. We aim to streamline services as we continue to grow to
-                match the increasing needs of our customers while providing
-                Professional and Safe Drivers.
-                </p>
-
-                <!-- Read More -->
-                <a href="/pft-website/pages/about.php"
-                   class="mt-6 inline-flex items-center gap-2 text-red-600 font-semibold hover:gap-3 transition-all duration-300">
-                    Read More
-                    <i class="fa-solid fa-arrow-right text-sm"></i>
-                </a>
-
-            </div>
-        </div>
-    </div>
-
-</div>
-
-<div class="relative group">
-
-    <!-- Trigger Button -->
-    <button class="flex items-center gap-2 hover:text-red-600 transition">
-        <i class="fa-solid fa-truck text-sm"></i> Services
-        <i class="fa fa-chevron-down text-xs group-hover:rotate-180 transition-transform duration-300"></i>
-    </button>
-
-    <!-- MEGA MENU -->
-    <div class="absolute left-1/2 -translate-x-1/2 mt-6
-                w-[90vw] max-w-5xl
-                opacity-0 invisible translate-y-6
-                group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
-                transition-all duration-500 ease-out
-                z-50">
-
-        <!-- Background Layer -->
-        <div class="relative overflow-hidden rounded-2xl shadow-2xl">
-
-            <!-- Blurred Image Background -->
-            <img src="<?= BASE_URL ?>assets/images/flatbed1.webp"
-                 class="absolute inset-0 w-full h-full object-cover
-                        blur-2xl scale-110 opacity-30">
-
-            <!-- Dark Overlay -->
-            <div class="absolute inset-0 bg-[#1f1f1f]/90 backdrop-blur-md"></div>
-
-            <!-- Content -->
-            <div class="relative grid grid-cols-1 md:grid-cols-2 gap-12
-                        px-12 py-10 text-gray-300">
-
-                <!-- COLUMN 1 -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-6 text-red-500 uppercase tracking-wider relative inline-block">
-                         Truck Types
-                        <span class="absolute left-0 -bottom-2 w-12 h-1 bg-red-600 rounded"></span>
-                    </h3>
-
-                    <a href="/pft-website/pages/services/flatbed.php"
-                       class="mega-link">
-                        <i class="fa-solid fa-trailer text-sm"></i> Flatbed
-                    </a>
-
-                    <a href="/pft-website/pages/services/stepdeck.php"
-                       class="mega-link">
-                        <i class="fa-solid fa-road text-sm"></i> Stepdeck
-                    </a>
-                      <a href="/pft-website/pages/services/Wide Load.php"
-                       class="mega-link">
-                        <i class="fa-solid fa-arrows-left-right text-sm"></i> Wide Load
-                    </a>
-
-                    <a href="/pft-website/pages/services/reefer.php"
-                       class="mega-link">
-                        <i class="fa-solid fa-snowflake text-sm"></i> Reefer
-                    </a>
-                </div>
-
-                <!-- COLUMN 2 -->
-                <div>
-                   <h3 class="text-lg font-semibold mb-6 text-red-500 uppercase tracking-wider relative inline-block">
-                          Resources
-                        <span class="absolute left-0 -bottom-2 w-12 h-1 bg-red-600 rounded"></span>
-                    </h3>
-
-                    <a href="/pft-website/pages/safety.php"
-   class="mega-link">
-    <i class="fa-solid fa-shield-halved text-sm"></i> Compliance
+<a href="/pft-website/pages/about.php" class="flex items-center gap-2 hover:text-red-600 transition group">
+<i class="fa-solid fa-building text-sm"></i> About
 </a>
 
-<?php 
-$headerTrackingUrl="/pft-website/customer-portal/login.php?return_to=/pft-website/customer-portal/tracking.php"; 
-?>
 
-<a href="<?= $headerTrackingUrl ?>"
-   class="mega-link">
-    <i class="fa-solid fa-location-dot text-sm"></i> Tracking
+<div>
+
+<a href="/pft-website/pages/services.php"
+   class="flex items-center gap-2 hover:text-red-600 transition">
+
+   <i class="fa-solid fa-truck text-sm"></i>
+   Services
+
 </a>
-                  </a>
-
-                  
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
 
 </div>
 <a href="/pft-website/pages/careers.php" 

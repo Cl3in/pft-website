@@ -65,7 +65,7 @@
 
 <!-- Bottom Bar -->
 <div class="border-t border-[#222] py-6 text-center text-gray-500 text-sm">
-    © <?php echo date("Y"); ?> <?php echo SITE_NAME; ?>. All Rights Reserved.
+    © 2020 <?php echo SITE_NAME; ?>. All Rights Reserved.
 </div>
 
 </footer>
