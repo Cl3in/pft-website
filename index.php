@@ -3,487 +3,321 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/pft-website/includes/config.php';
 include BASE_PATH . 'includes/header.php';
 ?>
 
-<section id="heroSection"
-    class="relative overflow-hidden text-white
-           min-h-[500px] lg:min-h-[650px]
-           flex flex-col lg:flex-row">
-
-    <!-- LEFT SIDE (20%) -->
-<div class="relative w-full lg:w-1/5
-            min-h-[220px] lg:min-h-full
-            border-r border-gray-800
-            flex items-center justify-center
-            p-8 lg:p-10
-            overflow-hidden">
-
-    <!-- Background Image -->
-    <img src="<?= BASE_URL ?>assets/images/flatbed1.webp"
-         class="absolute inset-0 w-full h-full object-cover
-                blur-2xl scale-125 opacity-50">
-
-    <!-- Softer Overlay -->
-    <div class="absolute inset-0 bg-black/40"></div>
-
-    <!-- Logo -->
-    <!-- <a href="/pft-website/index.php" class="relative z-10">
-        <img src="<?= BASE_URL ?>assets/images/logo.png"
-             class="h-32 lg:h-40 w-auto object-contain
-                    drop-shadow-2xl hover:scale-105 transition duration-500">
-    </a> -->
-
-</div>
-
-    <!-- RIGHT SIDE (80%) -->
-    <div class="relative w-full lg:w-4/5
-            min-h-[350px] sm:min-h-[400px] lg:min-h-full
-            flex items-center justify-center
-            overflow-hidden">
-
-        <!-- Slides Wrapper -->
-        <div id="heroSlides" class="absolute inset-0 w-full h-full"></div>
-
-        <!-- Left Arrow -->
-        <button id="prevSlide"
-            class="absolute left-6 top-1/2 -translate-y-1/2 z-30
-                   text-white text-4xl opacity-70 hover:opacity-100 transition">
-            ‹
-        </button>
-
-        <!-- Right Arrow -->
-        <button id="nextSlide"
-            class="absolute right-6 top-1/2 -translate-y-1/2 z-30
-                   text-white text-4xl opacity-70 hover:opacity-100 transition">
-            ›
-        </button>
-
-        <!-- CTA Button -->
-
-
-    </div>
-
-</section>
-
-
-
-
+<!-- INTRO SECTION -->
 <section class="py-20 bg-[#181818] text-white">
 
-  <div class="max-w-4xl mx-auto px-6 text-center">
+<div class="max-w-7xl mx-auto px-6">
 
-    <h2 class="text-4xl font-bold mb-6">
-      About Parrish Trucking Company
-    </h2>
+<div class="grid lg:grid-cols-2 gap-14 items-center">
 
-    <p class="text-lg text-gray-300 leading-relaxed mb-8">
-      PFT builds strong partnerships with customers who value the shipping 
-      industry and understand the importance of fair compensation. In return, 
-      we provide personalized service, professional communication, dependable 
-      on-time delivery, and competitive rates.
-    </p>
+<!-- LEFT -->
+<div class="text-center lg:text-left">
 
-    <a href="/pft-website/pages/about.php"
-       class="inline-block bg-red-600 text-white px-8 py-3 rounded-full shadow-lg hover:bg-red-700 transition">
-       Read More
-       <span class="ml-2 transition">
-         →
-       </span>
-    </a>
+<h2 class="text-5xl font-extrabold tracking-widest mb-6">
+PFT
+</h2>
 
-  </div>
+<!-- <div class="flex justify-center lg:justify-start mb-8">
+<img src="<?= BASE_URL ?>assets/images/logo.png"
+class="w-60 sm:w-72 md:w-80 lg:w-96 xl:w-[420px] h-auto object-contain drop-shadow-xl"
+alt="Parrish Family Trucking Logo">
+</div> -->
+
+<p class="text-gray-300 text-lg max-w-lg mx-auto lg:mx-0">
+Reliable Nationwide Freight Solutions
+</p>
+
+</div>
+
+
+<!-- RIGHT IMAGE SLIDER -->
+<div class="relative">
+
+<div class="relative overflow-hidden rounded-xl shadow-2xl
+h-[320px] sm:h-[360px] lg:h-[420px] bg-gray-800">
+
+<img id="slideA"
+class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000"
+alt="Freight Transport">
+
+<img id="slideB"
+class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+alt="Freight Transport">
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
 
-<section class="relative py-16 overflow-hidden">
 
-<!-- Background Image -->
-<div class="absolute inset-0">
-  <img src="<?= BASE_URL ?>assets/images/stepdek6.webp"
-       alt="Freight Truck"
-       class="w-full h-full object-cover">
+
+
+<!-- ABOUT / CONTACT / CAREERS -->
+<section class="bg-[#0b0f1a] text-white py-16">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="grid md:grid-cols-3 gap-12 text-center mb-16">
+
+<!-- ABOUT -->
+<a href="<?= BASE_URL ?>pages/about.php"
+class="group block hover:-translate-y-1 transition duration-300">
+
+<h3 class="text-white font-bold text-xl mb-4 flex items-center justify-center gap-2 group-hover:text-red-400">
+<i class="fa-solid fa-circle-info text-red-500"></i>
+ABOUT US
+</h3>
+
+<div class="border-2 border-blue-500 p-6 text-sm leading-relaxed text-gray-300 group-hover:border-red-500 transition">
+
+<p>
+PFT Logistics delivers dependable freight solutions across North America.
+We specialize in flatbed transportation, step deck hauling, and oversized
+load management.
+</p>
+
 </div>
 
-<!-- Dark Overlay -->
-<div class="absolute inset-0 bg-black/70"></div>
+</a>
 
-<div class="relative z-10 max-w-6xl mx-auto px-6">
 
-<!-- Inner Box -->
-<div class="bg-white/95 backdrop-blur-md text-black rounded-2xl py-12 px-8 text-center shadow-2xl">
+<!-- CONTACT -->
+<a href="<?= BASE_URL ?>pages/contact.php"
+class="group block hover:-translate-y-1 transition duration-300">
 
-<h2 class="text-3xl font-bold mb-10 tracking-wide text-black text-center">
-  Quick Access
+<h3 class="text-white font-bold text-xl mb-4 flex items-center justify-center gap-2 group-hover:text-red-400">
+<i class="fa-solid fa-envelope text-red-500"></i>
+CONTACT US
+</h3>
+
+<p class="text-gray-300 text-sm">
+We’d love to hear from you.
+</p>
+
+</a>
+
+
+<!-- CAREERS -->
+<a href="<?= BASE_URL ?>pages/careers.php"
+class="group block hover:-translate-y-1 transition duration-300">
+
+<h3 class="text-white font-bold text-xl mb-4 flex items-center justify-center gap-2 group-hover:text-red-400">
+<i class="fa-solid fa-briefcase text-red-500"></i>
+EMPLOYMENT
+</h3>
+
+<p class="text-gray-300 text-sm">
+Drive your career forward.
+</p>
+
+</a>
+
+</div>
+
+
+<!-- SERVICES -->
+<div class="text-center mb-10">
+
+<h2 class="text-2xl font-bold text-white tracking-wide flex items-center justify-center gap-2">
+<i class="fa-solid fa-truck-moving text-red-500"></i>
+SERVICES
 </h2>
 
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-<!-- Freight Tracking -->
-<a href="/pft-website/customer-portal/login.php?return_to=/pft-website/customer-portal/tracking.php"
-   class="group bg-white shadow-md rounded-xl p-6 flex items-center gap-4 hover:shadow-xl hover:-translate-y-1 transition duration-300">
-
-<div class="w-12 h-12 flex items-center justify-center rounded-full bg-red-600 text-white text-xl group-hover:bg-red-700 transition">
-<i class="fa-solid fa-truck-fast"></i>
 </div>
 
-<span class="text-lg font-semibold text-gray-800 group-hover:text-red-600 transition">
+
+<div class="grid md:grid-cols-4 gap-8">
+
+<a href="<?= BASE_URL ?>pages/services/flatbed.php" class="group text-center">
+<h4 class="font-semibold mb-3">FLATBED</h4>
+<img src="<?= BASE_URL ?>assets/images/flat.jpeg"
+class="w-full h-40 object-cover rounded shadow-lg group-hover:scale-105 transition"
+alt="Flatbed Truck">
+</a>
+
+<a href="<?= BASE_URL ?>pages/services/stepdeck.php" class="group text-center">
+<h4 class="font-semibold mb-3">STEPDECK</h4>
+<img src="<?= BASE_URL ?>assets/images/stepdeck.jpeg"
+class="w-full h-40 object-cover rounded shadow-lg group-hover:scale-105 transition"
+alt="Stepdeck Trailer">
+</a>
+
+<a href="<?= BASE_URL ?>pages/services/refer.php" class="group text-center">
+<h4 class="font-semibold mb-3">REFER (COMING SOON)</h4>
+<img src="<?= BASE_URL ?>assets/images/stepdek8.webp"
+class="w-full h-40 object-cover rounded shadow-lg group-hover:scale-105 transition"
+alt="Refrigerated Freight">
+</a>
+
+<a href="<?= BASE_URL ?>pages/services/oversized.php" class="group text-center">
+<h4 class="font-semibold mb-3">OVERSIZED LOAD</h4>
+<img src="<?= BASE_URL ?>assets/images/wide.jpeg"
+class="w-full h-40 object-cover rounded shadow-lg group-hover:scale-105 transition"
+alt="Oversized Load Transport">
+</a>
+
+</div>
+
+</div>
+</section>
+
+
+
+<!-- PARTNERS -->
+<section class="py-16 bg-[#0b0f1a] text-white">
+
+<div class="max-w-6xl mx-auto px-6">
+
+<div class="bg-white/95 rounded-2xl py-12 px-8 text-center shadow-2xl">
+
+<h2 class="text-3xl font-bold mb-10 text-black">
+Trusted Partners & Certifications
+</h2>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+<a href="https://www.verizonconnect.com/" target="_blank"
+class="group bg-white shadow-md rounded-xl p-6 flex flex-col items-center hover:shadow-xl transition">
+
+<img src="<?= BASE_URL ?>assets/images/verizon-connect.png"
+class="h-16 object-contain mb-4"
+alt="Verizon Connect">
+
+<span class="text-lg font-semibold text-gray-800">
 Freight Tracking
 </span>
 
 </a>
 
-<!-- Careers -->
-<a href="/pft-website/pages/careers.php"
-class="group bg-white shadow-md rounded-xl p-6 flex items-center gap-4 hover:shadow-xl hover:-translate-y-1 transition duration-300">
 
-<div class="w-12 h-12 flex items-center justify-center rounded-full bg-red-600 text-white text-xl group-hover:bg-red-700 transition">
-<i class="fa-solid fa-user-tie"></i>
-</div>
+<a href="#"
+class="group bg-white shadow-md rounded-xl p-6 flex flex-col items-center hover:shadow-xl transition">
 
-<span class="text-lg font-semibold text-gray-800 group-hover:text-red-600 transition">
-Careers
+<img src="<?= BASE_URL ?>assets/images/sdvo_s.jpg"
+class="h-16 object-contain mb-4"
+alt="SDVOB Certified">
+
+<span class="text-lg font-semibold text-gray-800">
+SDVOB Certified
 </span>
 
 </a>
 
-<!-- Safety -->
-<a href="/pft-website/pages/safety.php"
-class="group bg-white shadow-md rounded-xl p-6 flex items-center gap-4 hover:shadow-xl hover:-translate-y-1 transition duration-300">
 
-<div class="w-12 h-12 flex items-center justify-center rounded-full bg-red-600 text-white text-xl group-hover:bg-red-700 transition">
-<i class="fa-solid fa-shield-halved"></i>
-</div>
+<a href="https://nastc.com/" target="_blank"
+class="group bg-white shadow-md rounded-xl p-6 flex flex-col items-center hover:shadow-xl transition">
 
-<span class="text-lg font-semibold text-gray-800 group-hover:text-red-600 transition">
-Safety & Compliance
-</span>
-
-</a>
-
-<!-- Contact -->
-<a href="/pft-website/pages/contact.php"
-class="group bg-white shadow-md rounded-xl p-6 flex items-center gap-4 hover:shadow-xl hover:-translate-y-1 transition duration-300">
-
-<div class="w-12 h-12 flex items-center justify-center rounded-full bg-red-600 text-white text-xl group-hover:bg-red-700 transition">
-<i class="fa-solid fa-envelope"></i>
-</div>
-
-<span class="text-lg font-semibold text-gray-800 group-hover:text-red-600 transition">
-Contact Us
-</span>
-
-</a>
-
-</div>
-</div>
-
-</div>
-</section>
-
-
-
-<!-- LIGHTBOX -->
-<div id="lightbox"
-     class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50">
-    <img id="lightboxImg" class="max-h-[90%] max-w-[90%] rounded-xl shadow-2xl">
-</div>
-
-
-<section class="py-14 bg-[#181818] text-white">
-  <div class="max-w-4xl mx-auto px-6 text-center">
-
-    <h2 class="text-3xl font-bold mb-6">
-      Our Location
-    </h2>
-
-    <div class="rounded-lg overflow-hidden shadow-xl border border-[#222] mb-5">
-      <iframe 
-        src="https://www.google.com/maps?q=4295+Cromwell+Rd+Ste+418+Chattanooga+TN+37421&output=embed"
-        width="100%" 
-        height="280"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy">
-      </iframe>
-    </div>
-
-    <p class="text-base text-gray-300 leading-relaxed">
-      4295 Cromwell Rd Ste 418<br>
-      Chattanooga, TN 37421
-    </p>
-
-  </div>
-</section>
-
-<section class="py-24 relative overflow-hidden">
-
-<!-- BACKGROUND IMAGE -->
-<div class="absolute inset-0">
-    <img src="<?= BASE_URL ?>assets/images/stepdek3.webp"
-         alt="Background"
-    class="w-full h-full object-cover blur-1xl opacity-20 scale-110">
-</div>
-
-<!-- SOFT DARK OVERLAY -->
-<div class="absolute inset-0 bg-black/70"></div>
-
-<div class="relative max-w-7xl mx-auto px-6">
-
-<div class="flex flex-col lg:flex-row items-center lg:items-start justify-start gap-12 lg:gap-24">
-  <!-- CARD -->
-<div class="bg-white shadow-2xl rounded-xl overflow-hidden w-[420px]">
-
-<div class="grid grid-cols-2">
-
-<!-- LEFT IMAGES -->
-<div class="flex flex-col">
-
-<img src="<?= BASE_URL ?>assets/images/stepdek3.webp"
-class="h-52 w-full object-cover"
-alt="Flatbed Transport">
-
-<img src="<?= BASE_URL ?>assets/images/flatbed1.webp"
-class="h-52 w-full object-cover bg-black p-4"
-alt="Parrish Family Trucking Logo">
-
-</div>
-
-<!-- RIGHT CONTENT -->
-<div class="p-6 text-sm">
-
-<h2 class="text-lg font-bold text-red-600 mb-4 tracking-wider">
-TRANSPORTATION
-</h2>
-
-<h3 class="text-sm font-semibold text-red-600 mb-3">
-OUR SERVICES
-</h3>
-
-<ul class="text-gray-700 space-y-1 mb-4">
-<li>Flatbed</li>
-<li>Stepdeck</li>
-<li>Oversize / Wide Load</li>
-<li>Power Only</li>
-</ul>
-
-<p class="text-gray-600 mb-3 text-xs leading-relaxed">
-Parrish Family Trucking uses <strong>Verizon Reveal Connect Fleet
-Management</strong> for dispatching, tracking deliveries, driver
-efficiency monitoring, and integrated camera safety systems.
-</p>
-
-<p class="text-gray-600 mb-4 text-xs">
-Member of the <strong>National Association of Small Trucking
-Companies (NASTC)</strong>.
-</p>
-
-<div class="flex items-center gap-4 mb-4">
-
-<a href="https://www.verizonconnect.com" target="_blank">
-<img src="<?= BASE_URL ?>assets/images/verizon-connect.png"
- class="h-20 w-auto object-contain">
-</a>
-
-<a href="https://nastc.com" target="_blank">
 <img src="<?= BASE_URL ?>assets/images/nastc.png"
- class="h-20 w-40 object-contain">
+class="h-16 object-contain mb-4"
+alt="NASTC Member">
+
+<span class="text-lg font-semibold text-gray-800">
+Member of NASTC
+</span>
+
 </a>
 
 </div>
 
-<div class="text-gray-700 text-xs leading-relaxed">
-<p><strong>DOT #</strong> 3549816</p>
-<p><strong>D-U-N-S #</strong> 12-829-9945</p>
 </div>
 
-</div>
-
-</div>
-</div>
-<!-- END CARD -->
-
-<!-- RIGHT SIDE TEXT -->
-<div class="max-w-2xl text-white">
-
-<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-Ready to Move Your Freight?<br>
-Partner With a Team You Can Trust.
-</h2>
-
-
-
-<ul class="space-y-3 text-gray-200 text-lg">
-<li>✔ Safe & Reliable Freight Delivery</li>
-<li>✔ Real-Time Shipment Tracking</li>
-<li>✔ Advanced Fleet Technology</li>
-<li>✔ Professional Dispatch & Logistics</li>
-</ul>
-
-</div>
-
-</div>
 </div>
 
 </section>
 
 
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+<!-- LOCATION -->
+<section class="py-14 bg-[#181818] text-white">
 
-    const BASE_URL = "<?= BASE_URL ?>";
+<div class="max-w-4xl mx-auto px-6 text-center">
 
-    const images = [
-        BASE_URL + "assets/images/loading.jpg",
-        BASE_URL + "assets/images/stepdek5.webp",
-        BASE_URL + "assets/images/stepdek6.webp",
-        BASE_URL + "assets/images/flatbed1.webp",
-        BASE_URL + "assets/images/stepdek3.webp",
-        BASE_URL + "assets/images/flatbed2.webp",
-        BASE_URL + "assets/images/flatbed3.webp",
-        BASE_URL + "assets/images/flatbed6.webp",
-        BASE_URL + "assets/images/stepdek.webp",
-        BASE_URL + "assets/images/stepdek1.webp",
-        BASE_URL + "assets/images/stepdek2.webp",
-        BASE_URL + "assets/images/stepdek9.webp",
-        BASE_URL + "assets/images/stepdek8.webp",
-        BASE_URL + "assets/images/flatbed.webp",
-        BASE_URL + "assets/images/stepdek7.webp"
-    ];
+<h2 class="text-3xl font-bold mb-6">
+Our Location
+</h2>
 
-    const heroSection = document.getElementById("heroSection");
-    const container = document.getElementById("heroSlides");
-    const nextBtn = document.getElementById("nextSlide");
-    const prevBtn = document.getElementById("prevSlide");
+<div class="rounded-lg overflow-hidden shadow-xl border border-[#222] mb-5">
 
-    let current = 0;
-    let interval;
-    const duration = 6000;
-    let startX = 0;
+<iframe
+src="https://www.google.com/maps?q=4295+Cromwell+Rd+Ste+418+Chattanooga+TN+37421&output=embed"
+width="100%"
+height="280"
+style="border:0;"
+loading="lazy">
+</iframe>
 
-    // Create slides
-    images.forEach((src, index) => {
-        const slide = document.createElement("div");
-        slide.className = `absolute inset-0 transition-opacity duration-1000 ${index === 0 ? "opacity-100" : "opacity-0"}`;
+</div>
 
-        slide.innerHTML = `
-            <img src="${src}" loading="lazy" 
-                 class="hero-image w-full h-full object-cover transition-transform duration-300">
-            <div class="absolute inset-0 bg-black/60"></div>
-        `;
+<p class="text-gray-300">
+4295 Cromwell Rd Ste 418<br>
+Chattanooga, TN 37421
+</p>
 
-        container.appendChild(slide);
-    });
+</div>
 
-    const slides = container.children;
-
-    function showSlide(index) {
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].classList.remove("opacity-100");
-            slides[i].classList.add("opacity-0");
-        }
-        slides[index].classList.remove("opacity-0");
-        slides[index].classList.add("opacity-100");
-    }
-
-    function nextSlide() {
-        current = (current + 1) % slides.length;
-        showSlide(current);
-    }
-
-    function prevSlide() {
-        current = (current - 1 + slides.length) % slides.length;
-        showSlide(current);
-    }
-
-    function startAuto() {
-        interval = setInterval(nextSlide, duration);
-    }
-
-    function stopAuto() {
-        clearInterval(interval);
-    }
-
-    // Buttons
-    nextBtn.addEventListener("click", nextSlide);
-    prevBtn.addEventListener("click", prevSlide);
-
-    // Pause on hover
-    heroSection.addEventListener("mouseenter", stopAuto);
-    heroSection.addEventListener("mouseleave", startAuto);
-
-    // Swipe support
-    heroSection.addEventListener("touchstart", e => {
-        startX = e.touches[0].clientX;
-    });
-
-    heroSection.addEventListener("touchend", e => {
-        let diff = e.changedTouches[0].clientX - startX;
-        if (diff > 70) prevSlide();
-        if (diff < -70) nextSlide();
-    });
-
-    // Parallax
-    heroSection.addEventListener("mousemove", e => {
-        const images = document.querySelectorAll(".hero-image");
-        const x = (e.clientX / window.innerWidth - 0.5) * 8;
-        const y = (e.clientY / window.innerHeight - 0.5) * 8;
-
-        images.forEach(img => {
-            img.style.transform = `scale(1.05) translate(${x}px, ${y}px)`;
-        });
-    });
-
-    startAuto();
-
-});
-</script>
+</section>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
 
-    /* Lightbox */
-    const items = document.querySelectorAll(".fleet-item img");
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightboxImg");
+const images = [
 
-    items.forEach(img => {
-        img.addEventListener("click", () => {
-            lightbox.classList.remove("hidden");
-            lightbox.classList.add("flex");
-            lightboxImg.src = img.src;
-        });
-    });
+"<?= BASE_URL ?>assets/images/loading.jpg",
+"<?= BASE_URL ?>assets/images/stepdek5.webp",
+"<?= BASE_URL ?>assets/images/stepdek6.webp",
+"<?= BASE_URL ?>assets/images/flatbed1.webp",
+"<?= BASE_URL ?>assets/images/flatbed2.webp",
+"<?= BASE_URL ?>assets/images/flatbed3.webp",
+"<?= BASE_URL ?>assets/images/flatbed6.webp",
+"<?= BASE_URL ?>assets/images/stepdek.webp",
+"<?= BASE_URL ?>assets/images/stepdek1.webp",
+"<?= BASE_URL ?>assets/images/stepdek2.webp",
+"<?= BASE_URL ?>assets/images/stepdek9.webp",
+"<?= BASE_URL ?>assets/images/stepdek8.webp",
+"<?= BASE_URL ?>assets/images/flatbed.webp",
+"<?= BASE_URL ?>assets/images/stepdek7.webp"
 
-    lightbox.addEventListener("click", () => {
-        lightbox.classList.add("hidden");
-        lightbox.classList.remove("flex");
-    });
+];
 
+let index = 0;
 
-    /* Scroll Animation */
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                entry.target.classList.remove("opacity-0","translate-y-10");
-                entry.target.classList.add("opacity-100","translate-y-0");
-            }
-        });
-    }, { threshold: 0.1 });
+const slideA = document.getElementById("slideA");
+const slideB = document.getElementById("slideB");
 
-    document.querySelectorAll(".fleet-item").forEach(el => observer.observe(el));
+slideA.src = images[0];
 
+let showingA = true;
 
-    /* Auto Slider Feel (slow horizontal drift effect) */
-    const container = document.getElementById("fleetContainer");
-    let scrollAmount = 0;
+function nextSlide(){
 
-    setInterval(() => {
-        scrollAmount += 1;
-        container.scrollBy({ top: 0, left: 1, behavior: "smooth" });
-    }, 50);
+index = (index + 1) % images.length;
 
-});
+if(showingA){
+
+slideB.src = images[index];
+slideB.style.opacity = 1;
+slideA.style.opacity = 0;
+
+}else{
+
+slideA.src = images[index];
+slideA.style.opacity = 1;
+slideB.style.opacity = 0;
+
+}
+
+showingA = !showingA;
+
+}
+
+setInterval(nextSlide, 4000);
+
 </script>
 
 <?php include BASE_PATH . 'includes/footer.php'; ?>
