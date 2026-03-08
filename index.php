@@ -77,11 +77,19 @@ ABOUT US
 
 <div class="border-2 border-blue-500 p-6 text-sm leading-relaxed text-gray-300 group-hover:border-red-500 transition">
 
-<p>
+<p class="mb-4">
 PFT Logistics delivers dependable freight solutions across North America.
 We specialize in flatbed transportation, step deck hauling, and oversized
 load management.
 </p>
+
+<!-- READ MORE -->
+<span class="inline-flex items-center gap-2 text-red-500 font-semibold text-sm group-hover:text-red-400">
+
+Read More
+<i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition"></i>
+
+</span>
 
 </div>
 
@@ -105,7 +113,7 @@ We’d love to hear from you.
 
 
 <!-- CAREERS -->
-<a href="<?= BASE_URL ?>pages/careers.php"
+<a href="<?= BASE_URL ?>forms/driver-application.php"
 class="group block hover:-translate-y-1 transition duration-300">
 
 <h3 class="text-white font-bold text-xl mb-4 flex items-center justify-center gap-2 group-hover:text-red-400">
@@ -156,7 +164,7 @@ class="w-full h-40 object-cover rounded shadow-lg group-hover:scale-105 transiti
 alt="Refrigerated Freight">
 </a>
 
-<a href="<?= BASE_URL ?>pages/services/oversized.php" class="group text-center">
+<a href="<?= BASE_URL ?>pages/services/wideload.php" class="group text-center">
 <h4 class="font-semibold mb-3">OVERSIZED LOAD</h4>
 <img src="<?= BASE_URL ?>assets/images/wide.jpeg"
 class="w-full h-40 object-cover rounded shadow-lg group-hover:scale-105 transition"
