@@ -34,7 +34,7 @@ federal highway height limits while maximizing load capacity.
 </p>
 
 <p class="text-gray-500 leading-relaxed mb-6">
-Parrish Family Trucking provides professional **step deck transportation
+Parrish Family Trucking provides professional step deck transportation
 services for construction equipment, industrial machinery, agricultural
 equipment, and oversized freight** across regional and interstate routes.
 </p>
@@ -58,7 +58,7 @@ What Is Step Deck Transportation?
 </h2>
 
 <p class="text-gray-400 leading-relaxed mb-6 text-center">
-Step deck trailers feature a **two-level trailer design** with a higher
+Step deck trailers feature a two-level trailer design with a higher
 front deck and a lower rear deck. This configuration increases vertical
 clearance compared to traditional flatbeds while maintaining legal
 height requirements on most highways.
@@ -66,8 +66,8 @@ height requirements on most highways.
 
 <p class="text-gray-400 leading-relaxed text-center">
 This makes step deck trailers ideal for transporting tall freight such
-as **construction machinery, industrial equipment, generators,
-manufacturing components, and prefabricated structures**.
+as construction machinery, industrial equipment, generators,
+manufacturing components, and prefabricated structures.
 </p>
 
 </div>
@@ -204,39 +204,6 @@ with FMCSA transportation regulations.
 
 </div>
 </section>
-
-
-<!-- ================= INTERNAL LINKS ================= -->
-<section class="py-24 bg-black">
-<div class="max-w-6xl mx-auto px-6 text-center">
-
-<h2 class="text-3xl font-bold mb-8">
-Explore Our Other Freight Services
-</h2>
-
-<div class="flex flex-wrap justify-center gap-6 text-red-500 font-semibold">
-
-<a href="<?= BASE_URL ?>pages/services/flatbed.php" class="hover:text-red-400 transition">
-Flatbed Trucking
-</a>
-
-<a href="<?= BASE_URL ?>pages/services/rgne.php" class="hover:text-red-400 transition">
-RGN Heavy Haul
-</a>
-
-<a href="<?= BASE_URL ?>pages/services/logistics.php" class="hover:text-red-400 transition">
-Freight Logistics
-</a>
-
-<a href="<?= BASE_URL ?>pages/contact.php" class="hover:text-red-400 transition">
-Request Shipping Quote
-</a>
-
-</div>
-
-</div>
-</section>
-
 
 <!-- ================= FAQ ================= -->
 <section class="py-28 bg-[#0f0f0f]">

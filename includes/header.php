@@ -197,7 +197,8 @@ Compliance
 
 </a>
 
-<a href="/pft-website/pages/tracking.php"
+<a href="https://www.verizonconnect.com/"
+target="_blank"
 class="flex items-center gap-3">
 
 <i class="fa-solid fa-location-dot"></i>
@@ -208,7 +209,7 @@ Tracking
 </div>
 
 
-<a href="/pft-website/pages/careers.php"
+<a href="/pft-website/forms/driver-application.php"
 class="flex items-center gap-3">
 
 <i class="fa-solid fa-briefcase"></i>

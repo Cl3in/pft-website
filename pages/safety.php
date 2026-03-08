@@ -29,17 +29,8 @@ include BASE_PATH . 'includes/header.php';
         D-U-N-S #: 12-829-9945
       </p>
 
-      <!-- CONTACT -->
-      <h3 class="font-['Oswald'] text-4xl font-medium tracking-[0.6em] text-[#ff4d4d] opacity-95 mb-10 uppercase">
-        CONTACT
-      </h3>
+    
 
-      <!-- Contact Details -->
-      <div class="font-['Oswald'] text-2xl tracking-[0.25em] text-[#ff6666] opacity-80 space-y-6 uppercase">
-        <p>www.parrishft.com</p>
-        <p>info@parrishft.com</p>
-        <p>1-423-680-1238</p>
-      </div>
 
       <!-- FMCSA VERIFY BUTTON -->
       <div class="mt-12">
@@ -84,13 +75,6 @@ include BASE_PATH . 'includes/header.php';
 
     </div>
 
-    <!-- INSURANCE REQUEST -->
-    <div class="mt-14">
-<a href="/pft-website/pages/contact.php"
-   class="mt-6 inline-block bg-red-600 text-white px-8 py-3 rounded-full shadow-lg hover:bg-red-700 transition">
-   Request Certificate of Insurance
-</a>
-    </div>
 
     <!-- LAST UPDATED -->
     <p class="mt-8 text-sm text-gray-500">

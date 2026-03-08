@@ -157,7 +157,7 @@ class="w-full h-40 object-cover rounded shadow-lg group-hover:scale-105 transiti
 alt="Stepdeck Trailer">
 </a>
 
-<a href="<?= BASE_URL ?>pages/services/refer.php" class="group text-center">
+<a href="<?= BASE_URL ?>pages/services/reefer.php" class="group text-center">
 <h4 class="font-semibold mb-3">REFER (COMING SOON)</h4>
 <img src="<?= BASE_URL ?>assets/images/stepdek8.webp"
 class="w-full h-40 object-cover rounded shadow-lg group-hover:scale-105 transition"
@@ -186,7 +186,7 @@ alt="Oversized Load Transport">
 <div class="bg-white/95 rounded-2xl py-12 px-8 text-center shadow-2xl">
 
 <h2 class="text-3xl font-bold mb-10 text-black">
-Trusted Partners & Certifications
+Our Professional Partnerships
 </h2>
 
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -199,7 +199,7 @@ class="h-16 object-contain mb-4"
 alt="Verizon Connect">
 
 <span class="text-lg font-semibold text-gray-800">
-Freight Tracking
+Our Freight Tracking
 </span>
 
 </a>
