@@ -3,22 +3,22 @@
 <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-8">
 
 <!-- Brand -->
-<div class="text-xl font-bold text-blue-400">
-PFT
+<div class="text-xl font-bold text-blue-900">
+    PFT
 </div>
 
 <!-- Navigation -->
-<div class="flex gap-8 text-blue-400 text-sm">
+<div class="flex gap-8 text-blue-900 text-sm">
 
-<a href="/pft-website/index.php" class="hover:text-blue-300 transition">
+<a href="/pft-website/index.php" class="hover:text-blue-900 transition">
 Home
 </a>
 
-<a href="/pft-website/pages/careers.php" class="hover:text-blue-300 transition">
+<a href="/pft-website/pages/careers.php" class="hover:text-blue-900 transition">
 Careers
 </a>
 
-<a href="/pft-website/pages/safety.php" class="hover:text-blue-300 transition">
+<a href="/pft-website/pages/safety.php" class="hover:text-blue-900 transition">
 Safety & Compliance
 </a>
 
@@ -27,7 +27,7 @@ Safety & Compliance
 <!-- Social -->
 <div class="flex items-center gap-4">
 
-<span class="text-sm text-blue-400">Follow Us</span>
+<span class="text-sm text-blue-900">Follow Us</span>
 
 <a href="https://www.facebook.com/profile.php?id=61560985590384"
 target="_blank"
@@ -53,7 +53,7 @@ class="text-blue-400 hover:text-blue-300 transition text-xl">
 <!-- Bottom -->
 <div class="border-t border-[#222] py-6 text-center text-sm space-y-1">
 
-<p class="text-blue-400">
+<p class="text-blue-900">
 © 2020 PFT. All Rights Reserved.
 </p>
 
