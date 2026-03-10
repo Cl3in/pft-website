@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/pft-website/includes/config.php';
+require_once __DIR__ . '/../includes/config.php';
 include BASE_PATH . 'includes/header.php';
 ?>
 
@@ -29,9 +29,7 @@ Drive your career forward or submit your driver profile today!
 
 </section>
 
-
 <section class="py-20 bg-gray-900 text-white max-w-6xl mx-auto px-6 space-y-20">
-
 
 <!-- Why Choose Us -->
 <div class="relative rounded-3xl overflow-hidden" data-aos="fade-right">
@@ -57,15 +55,10 @@ Why Choose Us
 $reasons = [
 
 ["Reliable Equipment","Drive modern trucks safely."],
-
 ["Competitive Pay","Competitive compensation plus bonuses."],
-
 ["Family Culture","We treat drivers like family."],
-
 ["Flexible Schedules","Balance work and home life."],
-
 ["Safety First","Strict safety standards."],
-
 ["Career Growth","Promotion and leadership opportunities."]
 
 ];
@@ -87,9 +80,7 @@ echo "<div class='p-8 rounded-xl bg-gray-900 bg-opacity-80 hover:scale-105 trans
 
 </div>
 
-
 <!-- Driver Benefits -->
-
 <div class="bg-gray-800 p-12 rounded-3xl shadow-xl" data-aos="fade-left">
 
 <h2 class="text-4xl font-bold mb-6 text-red-400 text-center">
@@ -109,9 +100,7 @@ Driver Benefits
 
 </div>
 
-
 <!-- Job Listings -->
-
 <div data-aos="fade-up">
 
 <h2 class="text-4xl font-bold text-center mb-8">
@@ -128,12 +117,10 @@ Available Positions
 
 </div>
 
-
 <input id="job-search"
 type="text"
 placeholder="Search jobs..."
 class="w-full p-4 rounded-lg bg-gray-800 text-white border border-gray-700 mb-8">
-
 
 <div id="job-listings" class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 
@@ -142,9 +129,7 @@ class="w-full p-4 rounded-lg bg-gray-800 text-white border border-gray-700 mb-8"
 $jobs = [
 
 ["OTR Truck Driver","driver","Long-haul routes, CDL required. Pay & benefits included."],
-
 ["Regional Driver","driver","Regional routes, consistent home time."],
-
 ["Dispatch Coordinator","office","Manage freight schedules and support drivers."]
 
 ];
@@ -174,10 +159,7 @@ echo "<div class='flip-card cursor-pointer' data-type='{$job[1]}'>
 
 </div>
 
-
-
 <!-- Apply / Driver Profile Links -->
-
 <div class="max-w-4xl mx-auto mt-12 text-center" data-aos="fade-up">
 
 <h2 class="text-4xl font-bold mb-6">
@@ -185,18 +167,13 @@ Apply or Submit Your Driver Profile
 </h2>
 
 <p class="text-gray-300 text-lg mb-10">
-
 We have streamlined our hiring process.  
 Please use the secure forms below to submit your application or driver profile.
-
 </p>
-
 
 <div class="grid md:grid-cols-2 gap-8">
 
-
-<!-- Job Application Card -->
-
+<!-- Job Application -->
 <div class="bg-gray-800 p-10 rounded-2xl shadow-xl hover:scale-105 transition">
 
 <h3 class="text-2xl font-bold text-red-400 mb-4">
@@ -216,9 +193,7 @@ Apply for a Position
 
 </div>
 
-
-<!-- Driver Profile Card -->
-
+<!-- Driver Profile -->
 <div class="bg-gray-800 p-10 rounded-2xl shadow-xl hover:scale-105 transition">
 
 <h3 class="text-2xl font-bold text-red-400 mb-4">
@@ -242,11 +217,7 @@ Submit Driver Profile
 
 </div>
 
-
 </section>
-
-
-<!-- Scripts -->
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -255,81 +226,50 @@ Submit Driver Profile
 AOS.init({duration:1000, once:true});
 
 const filterButtons=document.querySelectorAll('.job-filter');
-
 const jobItems=document.querySelectorAll('.flip-card');
-
 const searchInput=document.getElementById('job-search');
 
-
 filterButtons.forEach(btn=>{
-
 btn.addEventListener('click',()=>{
-
 const type=btn.getAttribute('data-type');
 
 jobItems.forEach(job=>{
-
 if(type==='all'||job.getAttribute('data-type')===type){
-
 job.style.display='block';
-
 }else{
-
 job.style.display='none';
-
 }
-
 });
-
 });
-
 });
-
 
 searchInput.addEventListener('input',e=>{
-
 const val=e.target.value.toLowerCase();
 
 jobItems.forEach(job=>{
-
 if(job.innerText.toLowerCase().includes(val)){
-
 job.style.display='block';
-
 }else{
-
 job.style.display='none';
-
 }
-
 });
-
 });
 
 </script>
 
-
 <style>
 
 @keyframes gradient-x{
-
 0%{background-position:0% 50%}
-
 50%{background-position:100% 50%}
-
 100%{background-position:0% 50%}
-
 }
 
 .animate-gradient-x{
-
 background-size:200% 200%;
-
 animation:gradient-x 10s ease infinite;
-
 }
 
 </style>
-
 
 <?php include BASE_PATH . 'includes/footer.php'; ?>

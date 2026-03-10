@@ -1,5 +1,8 @@
 <?php
 
+require_once __DIR__ . '/../includes/config.php';
+require_once __DIR__ . '/../includes/env.php';
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -7,9 +10,9 @@ use PHPMailer\PHPMailer\Exception;
 LOAD PHPMailer
 ----------------------------- */
 
-require '../includes/phpmailer/PHPMailer.php';
-require '../includes/phpmailer/SMTP.php';
-require '../includes/phpmailer/Exception.php';
+require BASE_PATH . 'includes/phpmailer/PHPMailer.php';
+require BASE_PATH . 'includes/phpmailer/SMTP.php';
+require BASE_PATH . 'includes/phpmailer/Exception.php';
 
 
 /* -----------------------------
@@ -17,7 +20,7 @@ ALLOW ONLY POST REQUEST
 ----------------------------- */
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header("Location: ../pages/careers.php");
+    header("Location: " . BASE_URL . "pages/careers.php");
     exit();
 }
 
@@ -62,7 +65,7 @@ VALIDATE EMAIL
 ----------------------------- */
 
 if(!$email){
-    header("Location: ../pages/careers.php?driver=invalid_email");
+    header("Location: " . BASE_URL . "pages/careers.php?driver=invalid_email");
     exit();
 }
 
@@ -71,7 +74,7 @@ if(!$email){
 EMAIL CONTENT
 ----------------------------- */
 
-$subject = "New Driver Profile Submission";
+$subject = "New Driver Profile Submission - Parrish Family Trucking";
 
 $textBody = "
 New Driver Profile Submission
@@ -98,6 +101,7 @@ $htmlBody = "
 <p><strong>Birthday:</strong> $birthday</p>
 
 <h3>Address</h3>
+
 <p>
 $address<br>
 $city, $state $zip
@@ -108,14 +112,30 @@ $city, $state $zip
 
 
 /* -----------------------------
-SMTP MAIL CONFIGURATION
+SEND EMAIL
 ----------------------------- */
 
+$mail = new PHPMailer(true);
+
+try {
+
+    /* SMTP CONFIG */
+
+    $mail->isSMTP();
+    $mail->Host       = SMTP_HOST;
+$mail->SMTPAuth   = true;
+$mail->Username   = SMTP_USER;
+$mail->Password   = SMTP_PASS;
+$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+$mail->Port       = SMTP_PORT;
+
+    $mail->CharSet = 'UTF-8';
 
 
     /* EMAIL SETTINGS */
 
-    $mail->setFrom('no-reply@parrishft.com', 'Parrish Family Trucking');
+  $mail->setFrom('info@parrishft.com', 'Parrish Family Trucking');
+
     $mail->addAddress('operations@parrishft.com');
 
     $mail->addReplyTo($email, $name);
@@ -126,14 +146,15 @@ SMTP MAIL CONFIGURATION
     $mail->Body    = $htmlBody;
     $mail->AltBody = $textBody;
 
+
     $mail->send();
 
-    header("Location: ../pages/careers.php?driver=success");
+    header("Location: " . BASE_URL . "pages/careers.php?driver=success");
     exit();
 
 } catch (Exception $e) {
 
-    header("Location: ../pages/careers.php?driver=error");
+    header("Location: " . BASE_URL . "pages/careers.php?driver=error");
     exit();
 }
 

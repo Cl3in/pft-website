@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/pft-website/includes/config.php';
+require_once __DIR__ . '/../includes/config.php';
 include BASE_PATH . 'includes/header.php';
 ?>
 
@@ -19,7 +19,7 @@ include BASE_PATH . 'includes/header.php';
         DOT # 3549816
       </p>
 
-      <!-- MC NUMBER (Add yours if available) -->
+      <!-- MC NUMBER -->
       <p class="font-['Oswald'] text-3xl md:text-4xl font-medium tracking-[0.3em] text-[#ff4d4d] opacity-85 mb-10 uppercase">
         MC # XXXXXXX
       </p>
@@ -29,16 +29,13 @@ include BASE_PATH . 'includes/header.php';
         D-U-N-S #: 12-829-9945
       </p>
 
-    
-
-
       <!-- FMCSA VERIFY BUTTON -->
       <div class="mt-12">
-<a href="https://www.fmcsa.dot.gov/registration"
-   target="_blank"
-   class="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full transition">
-   Verify DOT Status on FMCSA
-</a>
+        <a href="https://www.fmcsa.dot.gov/registration"
+           target="_blank"
+           class="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full transition">
+           Verify DOT Status on FMCSA
+        </a>
       </div>
 
     </div>
@@ -74,7 +71,6 @@ include BASE_PATH . 'includes/header.php';
       </div>
 
     </div>
-
 
     <!-- LAST UPDATED -->
     <p class="mt-8 text-sm text-gray-500">

@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/pft-website/includes/config.php';
+require_once __DIR__ . '/../includes/config.php';
 include BASE_PATH . 'includes/header.php';
 ?>
 
@@ -12,18 +12,20 @@ include BASE_PATH . 'includes/header.php';
       Who We Are
       </h2>
 
-        <p>
-                Parrish Family Trucking is headquartered in Chattanooga, TN and
-                offers personalized and professional customer interactions,
-                on-time delivery, safe and secure transportation, and reasonable
-                rates. We aim to streamline services as we continue to grow to
-                match the increasing needs of our customers while providing
-                Professional and Safe Drivers.
-                </p>
+      <p>
+        Parrish Family Trucking is headquartered in Chattanooga, TN and
+        offers personalized and professional customer interactions,
+        on-time delivery, safe and secure transportation, and reasonable
+        rates. We aim to streamline services as we continue to grow to
+        match the increasing needs of our customers while providing
+        Professional and Safe Drivers.
+      </p>
+
       <p class="text-lg text-gray-300 leading-relaxed mb-4">
         Parrish Family Trucking (PFT) is a professional freight carrier delivering safe,
         dependable, and efficient transportation services across the United States.
       </p>
+
       <p class="text-lg text-gray-300 leading-relaxed">
         Built on family values and long-standing industry relationships, we focus on
         consistency, trust, and performance — mile after mile.
@@ -44,7 +46,7 @@ include BASE_PATH . 'includes/header.php';
 
   <!-- Background Image -->
   <div class="absolute inset-0">
-    <img src="/pft-website/assets/images/stepdek3.webp"
+    <img src="<?= BASE_URL ?>assets/images/stepdek3.webp"
          alt="Mission Background"
          class="w-full h-full object-cover">
   </div>
@@ -96,6 +98,7 @@ include BASE_PATH . 'includes/header.php';
     </div>
   </div>
 </section>
+
 <!-- LEADERSHIP + SAFETY -->
 <section class="py-20 bg-[#181818] text-white">
   <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
@@ -103,16 +106,14 @@ include BASE_PATH . 'includes/header.php';
 <section class="py-20 bg-[#181818] text-white">
   <div class="max-w-7xl mx-auto px-6 text-center">
 
-    <!-- Section Header -->
-<div class="mb-12 text-center">
-  <h2 class="text-3xl font-extrabold mb-4 text-red-600">👥 Leadership Team</h2>
-  <p class="block text-gray-300 leading-relaxed max-w-2xl mx-auto text-xl">
-    Our leadership team brings decades of transportation and logistics experience,
-    guiding PFT with a strong focus on performance, compliance, and people-first operations.
-    All leaders have a strong military background and ownership experience, ensuring discipline and strategic excellence.
-  </p>
-</div>
-
+    <div class="mb-12 text-center">
+      <h2 class="text-3xl font-extrabold mb-4 text-red-600">👥 Leadership Team</h2>
+      <p class="block text-gray-300 leading-relaxed max-w-2xl mx-auto text-xl">
+        Our leadership team brings decades of transportation and logistics experience,
+        guiding PFT with a strong focus on performance, compliance, and people-first operations.
+        All leaders have a strong military background and ownership experience, ensuring discipline and strategic excellence.
+      </p>
+    </div>
 
   </div>
 </section>
@@ -143,7 +144,6 @@ include BASE_PATH . 'includes/header.php';
       </p>
     </div>
 
-    <!-- IMAGE HOLDER -->
     <div class="bg-[#181818] rounded-2xl p-6 flex items-center justify-center shadow-xl">
       <img src="<?= BASE_URL ?>assets/images/sdvob-cert.webp"
            alt="SDVOB Certification"
@@ -152,8 +152,5 @@ include BASE_PATH . 'includes/header.php';
 
   </div>
 </section>
-
-<!-- CTA -->
-
 
 <?php include BASE_PATH . 'includes/footer.php'; ?>

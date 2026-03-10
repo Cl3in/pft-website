@@ -1,19 +1,21 @@
 <?php
 
+require_once __DIR__ . '/../includes/config.php';
+require_once __DIR__ . '/../includes/env.php';
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-
 /* LOAD PHPMailer */
 
-require '../includes/phpmailer/PHPMailer.php';
-require '../includes/phpmailer/SMTP.php';
-require '../includes/phpmailer/Exception.php';
+require BASE_PATH . 'includes/phpmailer/PHPMailer.php';
+require BASE_PATH . 'includes/phpmailer/SMTP.php';
+require BASE_PATH . 'includes/phpmailer/Exception.php';
 
 
 /* ONLY ALLOW POST */
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header("Location: ../pages/careers.php");
+    header("Location: " . BASE_URL . "pages/careers.php");
     exit();
 }
 
@@ -57,9 +59,8 @@ $zip        = clean($_POST['driver_zip'] ?? '');
 $experience = clean($_POST['experience'] ?? '');
 $message    = clean($_POST['message'] ?? '');
 
-
 if(!$email){
-    header("Location: ../pages/careers.php?application=invalid_email");
+    header("Location: " . BASE_URL . "pages/careers.php?application=invalid_email");
     exit();
 }
 
@@ -116,7 +117,7 @@ $city, $state $zip
 FILE UPLOAD
 ------------------------- */
 
-$uploadDir = "../uploads/";
+$uploadDir = BASE_PATH . "uploads/";
 $filePath  = "";
 $fileName  = "";
 
@@ -134,12 +135,12 @@ if(isset($_FILES['resume']) && $_FILES['resume']['error'] === 0){
     $ext = strtolower(pathinfo($originalName, PATHINFO_EXTENSION));
 
     if(!in_array($ext, $allowedExt)){
-        header("Location: ../pages/careers.php?application=invalid_file");
+        header("Location: " . BASE_URL . "pages/careers.php?application=invalid_file");
         exit();
     }
 
     if($fileSize > 5 * 1024 * 1024){
-        header("Location: ../pages/careers.php?application=file_too_large");
+        header("Location: " . BASE_URL . "pages/careers.php?application=file_too_large");
         exit();
     }
 
@@ -164,15 +165,24 @@ try{
 
     /* SMTP SETTINGS */
 
+    $mail->isSMTP();
+    $mail->Host       = SMTP_HOST;
+$mail->SMTPAuth   = true;
+$mail->Username   = SMTP_USER;
+$mail->Password   = SMTP_PASS;
+$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+$mail->Port       = SMTP_PORT;
+
+    $mail->CharSet = 'UTF-8';
 
 
     /* EMAIL DETAILS */
 
-    $mail->setFrom('no-reply@parrishft.com', 'Parrish Family Trucking');
+    $mail->setFrom('info@parrishft.com', 'Parrish Family Trucking');
+
     $mail->addAddress('operations@parrishft.com');
 
     $mail->addReplyTo($email, "$first $last");
-
 
     $mail->Subject = $subject;
 
@@ -190,14 +200,13 @@ try{
 
     $mail->send();
 
-    header("Location: ../pages/careers.php?application=success");
+    header("Location: " . BASE_URL . "pages/careers.php?application=success");
     exit();
 
 }
 catch (Exception $e){
 
-    header("Location: ../pages/careers.php?application=error");
+    header("Location: " . BASE_URL . "pages/careers.php?application=error");
     exit();
 
 }
-?>

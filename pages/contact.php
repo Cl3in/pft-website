@@ -1,5 +1,5 @@
-<?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/pft-website/includes/config.php';
+<?php 
+require_once __DIR__ . '/../includes/config.php';
 include BASE_PATH . 'includes/header.php';
 ?>
 
@@ -15,8 +15,25 @@ include BASE_PATH . 'includes/header.php';
 <!-- DARK OVERLAY -->
 <div class="absolute inset-0 bg-black/75"></div>
 
-
 <div class="relative max-w-7xl mx-auto px-6">
+
+<!-- SUCCESS MESSAGE -->
+<?php if(isset($_GET['contact']) && $_GET['contact'] == "success"): ?>
+
+<div class="bg-green-600 text-white p-4 rounded-lg mb-10 text-center font-semibold shadow-lg">
+✅ Your message has been sent successfully.
+</div>
+
+<?php endif; ?>
+
+<!-- ERROR MESSAGE -->
+<?php if(isset($_GET['contact']) && $_GET['contact'] == "error"): ?>
+
+<div class="bg-red-600 text-white p-4 rounded-lg mb-10 text-center font-semibold shadow-lg">
+⚠️ Something went wrong. Please try again.
+</div>
+
+<?php endif; ?>
 
 <!-- TITLE -->
 <div class="text-center mb-16">
@@ -33,16 +50,12 @@ responsive and reliable communication.
 
 </div>
 
-
 <div class="grid md:grid-cols-2 gap-16">
 
-<!-- ========================= -->
 <!-- CONTACT FORM -->
-<!-- ========================= -->
-
 <div class="bg-black/70 backdrop-blur-sm p-10 rounded-2xl shadow-2xl border border-gray-800">
 
-<form method="POST" class="space-y-6">
+<form method="POST" action="<?= BASE_URL ?>forms/send_contact.php" class="space-y-6">
 
 <input type="text" name="name" required placeholder="Full Name"
 class="w-full border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:outline-none focus:border-red-600">
@@ -53,7 +66,6 @@ class="w-full border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus
 <input type="tel" name="phone" required placeholder="Phone Number"
 class="w-full border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:outline-none focus:border-red-600">
 
-<!-- SUBJECT -->
 <select id="subjectSelect" name="subject" required
 class="w-full border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:outline-none focus:border-red-600">
 
@@ -67,8 +79,6 @@ class="w-full border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus
 
 </select>
 
-
-<!-- OTHER SUBJECT -->
 <div id="otherSubjectContainer" class="hidden">
 
 <input type="text"
@@ -79,10 +89,8 @@ class="w-full border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus
 
 </div>
 
-
 <input type="text" name="address" required placeholder="Street Address"
 class="w-full border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:outline-none focus:border-red-600">
-
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 
@@ -97,10 +105,8 @@ class="border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:outlin
 
 </div>
 
-
 <textarea name="message" rows="5" placeholder="Your Message"
 class="w-full border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:outline-none focus:border-red-600"></textarea>
-
 
 <button type="submit"
 class="w-full bg-red-600 text-white py-4 rounded-full hover:bg-red-700 transition font-bold text-lg">
@@ -113,12 +119,7 @@ Send Message
 
 </div>
 
-
-
-<!-- ========================= -->
 <!-- CONTACT INFO -->
-<!-- ========================= -->
-
 <div class="bg-black/60 backdrop-blur-sm p-10 rounded-2xl shadow-2xl border border-gray-800 flex flex-col justify-center">
 
 <h3 class="text-2xl font-bold text-red-600 mb-6">
@@ -152,7 +153,6 @@ info@parrishft.com
 </a>
 </p>
 
-<!-- SOCIAL MEDIA -->
 <div class="pt-4 border-t border-gray-700">
 
 <p class="text-sm text-gray-400 mb-3 font-semibold">
@@ -164,17 +164,13 @@ Follow Us
 <a href="https://www.facebook.com/profile.php?id=61560985590384"
 target="_blank"
 class="text-gray-300 hover:text-blue-500 transition">
-
 <i class="fa-brands fa-facebook"></i>
-
 </a>
 
 <a href="https://www.instagram.com/parrishfamilytrucking/"
 target="_blank"
 class="text-gray-300 hover:text-pink-500 transition">
-
 <i class="fa-brands fa-instagram"></i>
-
 </a>
 
 </div>
@@ -187,7 +183,6 @@ class="text-gray-300 hover:text-pink-500 transition">
 </div>
 
 </section>
-
 
 <script>
 
@@ -212,6 +207,5 @@ otherSubjectInput.removeAttribute('required');
 });
 
 </script>
-
 
 <?php include BASE_PATH . 'includes/footer.php'; ?>

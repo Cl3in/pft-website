@@ -1,5 +1,5 @@
 <?php 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/pft-website/includes/config.php';
+require_once __DIR__ . '/../../includes/config.php';
 include BASE_PATH . 'includes/header.php';
 ?>
 
@@ -11,9 +11,14 @@ include BASE_PATH . 'includes/header.php';
 
 <div>
 
-<h1 class="text-5xl font-extrabold mb-8 tracking-tight">
+<h1 class="text-5xl font-extrabold mb-6 tracking-tight">
 Oversized & Wide Load Transportation
 </h1>
+
+<!-- SEO SUBTITLE -->
+<p class="text-red-500 text-sm uppercase tracking-[0.3em] mb-6">
+Specialized Heavy Haul & Oversized Freight Logistics
+</p>
 
 <p class="text-gray-300 text-lg leading-relaxed mb-6">
 Parrish Family Trucking provides professional oversized and
@@ -34,17 +39,22 @@ is moved safely and efficiently.
 <p class="text-gray-300 leading-relaxed">
 If your project requires oversized freight transport,
 you can
-<a href="/pft-website/pages/contact.php" class="text-red-500 underline">
+<a href="<?= BASE_URL ?>pages/contact.php" class="text-red-500 underline">
 request a wide load transport quote
 </a>
 from our logistics specialists today.
 </p>
 
+<a href="<?= BASE_URL ?>pages/contact.php"
+class="inline-block mt-6 bg-red-600 hover:bg-red-700 px-8 py-4 rounded-lg font-semibold transition">
+Request Freight Quote
+</a>
+
 </div>
 
 <div>
 <img src="<?= BASE_URL ?>assets/images/wide.jpeg"
-alt="Wide load trucking services transporting oversized cargo"
+alt="Wide load semi truck transporting oversized industrial cargo on highway"
 class="rounded-2xl shadow-2xl">
 </div>
 
@@ -58,7 +68,7 @@ class="rounded-2xl shadow-2xl">
 <div class="absolute inset-0">
 <img src="<?= BASE_URL ?>assets/images/wide.jpeg"
 class="w-full h-full object-cover blur-sm scale-110"
-alt="Oversized freight background">
+alt="Oversized freight transportation logistics background">
 
 <div class="absolute inset-0 bg-black/70"></div>
 </div>
@@ -155,7 +165,7 @@ Industries We Support
 
 <img src="<?= BASE_URL ?>assets/images/wide.jpeg"
 class="h-48 w-full object-cover"
-alt="Construction oversized freight">
+alt="Construction equipment oversized freight transport">
 
 <div class="p-6">
 
@@ -178,7 +188,7 @@ equipment for infrastructure projects.
 
 <img src="<?= BASE_URL ?>assets/images/flatbed2.webp"
 class="h-48 w-full object-cover"
-alt="Energy equipment transport">
+alt="Energy sector heavy equipment transportation">
 
 <div class="p-6">
 
@@ -201,7 +211,7 @@ machinery between production facilities.
 
 <img src="<?= BASE_URL ?>assets/images/flatbed4.webp"
 class="h-48 w-full object-cover"
-alt="Manufacturing machinery transport">
+alt="Manufacturing machinery oversized freight transport">
 
 <div class="p-6">
 
@@ -224,6 +234,117 @@ components between facilities.
 </div>
 </section>
 
+
+<!-- ================= INTERNAL SERVICE LINKS ================= -->
+<section class="py-24 bg-black border-t border-gray-800">
+<div class="max-w-6xl mx-auto px-6 text-center">
+
+<h2 class="text-4xl font-bold mb-10">
+Other Transportation Services
+</h2>
+
+<div class="grid md:grid-cols-3 gap-10">
+
+<a href="<?= BASE_URL ?>pages/services/flatbed.php" class="bg-[#111] p-8 rounded-xl border border-gray-800 hover:border-red-600 transition">
+<h3 class="text-lg font-semibold mb-2">Flatbed Transportation</h3>
+<p class="text-gray-400 text-sm">Open deck freight transport for oversized cargo.</p>
+</a>
+
+<a href="<?= BASE_URL ?>pages/services/stepdeck.php" class="bg-[#111] p-8 rounded-xl border border-gray-800 hover:border-red-600 transition">
+<h3 class="text-lg font-semibold mb-2">Step Deck Transport</h3>
+<p class="text-gray-400 text-sm">Lower deck trailers for tall freight loads.</p>
+</a>
+
+<a href="<?= BASE_URL ?>pages/services/reefer.php" class="bg-[#111] p-8 rounded-xl border border-gray-800 hover:border-red-600 transition">
+<h3 class="text-lg font-semibold mb-2">Refrigerated Freight</h3>
+<p class="text-gray-400 text-sm">Temperature controlled cargo logistics.</p>
+</a>
+
 </div>
+
+</div>
+</section>
+
+
+<!-- ================= SERVICE AREA SEO ================= -->
+<section class="py-24 bg-[#0c0c0c]">
+<div class="max-w-5xl mx-auto px-6 text-center">
+
+<h2 class="text-4xl font-bold mb-10">
+Oversized Load Transport Across the Southern U.S.
+</h2>
+
+<p class="text-gray-400 mb-10">
+Parrish Family Trucking provides oversized freight logistics
+across major freight corridors including:
+</p>
+
+<div class="grid md:grid-cols-5 gap-6 text-gray-300 font-semibold">
+
+<div>Texas</div>
+<div>Louisiana</div>
+<div>Arkansas</div>
+<div>Oklahoma</div>
+<div>Mississippi</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= CTA BANNER ================= -->
+<section class="relative py-28">
+
+<div class="absolute inset-0">
+<img src="<?= BASE_URL ?>assets/images/flatbed.webp"
+class="w-full h-full object-cover blur-sm"
+alt="Heavy haul freight truck transporting industrial cargo">
+
+<div class="absolute inset-0 bg-black/80"></div>
+</div>
+
+<div class="relative max-w-4xl mx-auto text-center px-6">
+
+<h2 class="text-4xl md:text-5xl font-bold mb-6">
+Need Reliable Freight Transport?
+</h2>
+
+<p class="text-gray-300 text-lg mb-10">
+Request a freight quote today and let our logistics
+team handle your oversized transportation needs.
+</p>
+
+<a href="<?= BASE_URL ?>pages/contact.php"
+class="bg-red-600 hover:bg-red-700 px-10 py-4 rounded-full font-semibold text-lg transition">
+Request A Quote
+</a>
+
+</div>
+</section>
+
+</div>
+
+
+<!-- ================= FAQ SCHEMA ================= -->
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"Service",
+"name":"Oversized Load Transportation",
+"provider":{
+"@type":"Organization",
+"name":"Parrish Family Trucking"
+},
+"description":"Oversized and wide load transportation services including heavy equipment hauling, permit coordination, and freight logistics.",
+"areaServed":[
+"Texas",
+"Louisiana",
+"Arkansas",
+"Oklahoma",
+"Mississippi"
+]
+}
+</script>
 
 <?php include BASE_PATH . 'includes/footer.php'; ?>

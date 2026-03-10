@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/pft-website/includes/config.php';
+require_once __DIR__ . '/includes/config.php';
 include BASE_PATH . 'includes/header.php';
 ?>
 
@@ -16,12 +16,6 @@ include BASE_PATH . 'includes/header.php';
 <h2 class="text-5xl font-extrabold tracking-widest mb-6">
 PFT
 </h2>
-
-<!-- <div class="flex justify-center lg:justify-start mb-8">
-<img src="<?= BASE_URL ?>assets/images/logo.png"
-class="w-60 sm:w-72 md:w-80 lg:w-96 xl:w-[420px] h-auto object-contain drop-shadow-xl"
-alt="Parrish Family Trucking Logo">
-</div> -->
 
 <p class="text-gray-300 text-lg max-w-lg mx-auto lg:mx-0">
 Reliable Nationwide Freight Solutions
@@ -55,10 +49,6 @@ alt="Freight Transport">
 </section>
 
 
-
-
-
-
 <!-- ABOUT / CONTACT / CAREERS -->
 <section class="bg-[#0b0f1a] text-white py-16">
 
@@ -83,12 +73,9 @@ We specialize in flatbed transportation, step deck hauling, and oversized
 load management.
 </p>
 
-<!-- READ MORE -->
 <span class="inline-flex items-center gap-2 text-red-500 font-semibold text-sm group-hover:text-red-400">
-
 Read More
 <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition"></i>
-
 </span>
 
 </div>
@@ -271,6 +258,7 @@ Chattanooga, TN 37421
 </div>
 
 </section>
+
 
 <script>
 

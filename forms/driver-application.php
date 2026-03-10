@@ -10,7 +10,7 @@ include BASE_PATH . 'includes/header.php';
 <img src="<?= BASE_URL ?>assets/images/flatbed6.webp"
 class="w-full h-full object-cover"
 loading="lazy"
-alt="Flatbed trucking trailer">
+alt="Flatbed semi truck hauling industrial freight on highway">
 </div>
 
 <!-- Overlay -->
@@ -21,10 +21,15 @@ alt="Flatbed trucking trailer">
 <!-- LEFT SIDE CONTENT -->
 <div class="text-white">
 
-<h1 class="text-6xl md:text-7xl font-bold mb-6 leading-tight">
+<h1 class="text-6xl md:text-7xl font-bold mb-4 leading-tight">
 Apply To
 <span class="text-red-500">Drive With Us</span>
 </h1>
+
+<!-- SEO SUBTITLE -->
+<p class="text-red-500 uppercase tracking-[0.3em] text-sm mb-6">
+Professional Truck Driver Careers
+</p>
 
 <p class="text-xl text-gray-300 mb-10 max-w-xl">
 Parrish Family Trucking is always looking for reliable
@@ -102,6 +107,7 @@ Resume must be under 5MB.
 method="POST"
 enctype="multipart/form-data"
 class="bg-black/70 backdrop-blur-lg p-10 rounded-2xl shadow-2xl border border-gray-700 space-y-6">
+
 <input type="hidden" name="MAX_FILE_SIZE" value="5242880">
 <input type="hidden" name="form_type" value="application">
 
@@ -118,14 +124,17 @@ Driver Application
 
 <input type="text" name="first_name" required
 placeholder="First Name *"
+aria-label="First Name"
 class="border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:border-red-500 focus:outline-none">
 
 <input type="text" name="middle_name"
 placeholder="Middle Name"
+aria-label="Middle Name"
 class="border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:border-red-500 focus:outline-none">
 
 <input type="text" name="last_name" required
 placeholder="Last Name *"
+aria-label="Last Name"
 class="border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:border-red-500 focus:outline-none">
 
 </div>
@@ -136,12 +145,14 @@ class="border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:border
 
 <input type="email" name="email" required
 placeholder="Email Address *"
+aria-label="Email Address"
 class="border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:border-red-500 focus:outline-none">
 
 <input type="tel"
 name="phone"
 pattern="[0-9+\-\s()]{7,20}" required
 placeholder="Phone Number *"
+aria-label="Phone Number"
 class="border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:border-red-500 focus:outline-none">
 
 </div>
@@ -151,9 +162,11 @@ class="border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:border
 <div class="grid md:grid-cols-2 gap-4">
 
 <input type="date" name="driver_birthday" required
+aria-label="Date of Birth"
 class="border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:border-red-500 focus:outline-none">
 
 <select name="gender" required
+aria-label="Gender"
 class="border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:border-red-500 focus:outline-none">
 
 <option value="">Select Gender</option>
@@ -171,10 +184,12 @@ class="border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:border
 
 <input type="text" name="driver_address" required
 placeholder="Street Address *"
+aria-label="Street Address"
 class="border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:border-red-500 focus:outline-none">
 
 <input type="text" name="driver_city" required
 placeholder="City *"
+aria-label="City"
 class="border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:border-red-500 focus:outline-none">
 
 </div>
@@ -183,10 +198,12 @@ class="border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:border
 
 <input type="text" name="driver_state" required
 placeholder="State *"
+aria-label="State"
 class="border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:border-red-500 focus:outline-none">
 
 <input type="text" name="driver_zip" required
 placeholder="Zip Code *"
+aria-label="Zip Code"
 class="border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:border-red-500 focus:outline-none">
 
 </div>
@@ -195,10 +212,12 @@ class="border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:border
 <!-- EXPERIENCE -->
 <input type="number" name="experience" min="0" required
 placeholder="Years of Driving Experience *"
+aria-label="Driving Experience"
 class="border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:border-red-500 focus:outline-none">
 
 <textarea name="message" rows="5" required
 placeholder="Describe your driving experience..."
+aria-label="Driving Experience Description"
 class="border border-gray-700 p-4 rounded-lg bg-gray-900 text-white focus:border-red-500 focus:outline-none"></textarea>
 
 

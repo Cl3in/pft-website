@@ -1,5 +1,5 @@
-<?php 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/pft-website/includes/config.php';
+<?php  
+require_once __DIR__ . '/../../includes/config.php';
 include BASE_PATH . 'includes/header.php';
 ?>
 
@@ -11,7 +11,7 @@ include BASE_PATH . 'includes/header.php';
 
 <div class="relative">
 <img src="<?= BASE_URL ?>assets/images/stepdek.webp"
-alt="Step Deck Trailer Transportation"
+alt="Step deck trailer transporting tall industrial cargo for freight logistics"
 class="rounded-2xl shadow-2xl">
 
 <div class="absolute -bottom-6 -right-6 bg-red-600 text-white px-6 py-3 rounded-xl text-sm font-semibold shadow-xl">
@@ -21,9 +21,14 @@ Lower Deck Advantage
 
 <div>
 
-<h1 class="text-5xl font-extrabold mb-8 tracking-tight">
+<h1 class="text-5xl font-extrabold mb-6 tracking-tight">
 Step Deck Trailer Transportation Services
 </h1>
+
+<!-- SEO SUBTITLE -->
+<p class="text-red-500 text-sm uppercase tracking-[0.3em] mb-6">
+Professional Step Deck Freight & Tall Cargo Transport
+</p>
 
 <p class="text-gray-400 text-lg leading-relaxed mb-6">
 Step deck trailers also called drop deck trailers are specialized
@@ -36,7 +41,7 @@ federal highway height limits while maximizing load capacity.
 <p class="text-gray-500 leading-relaxed mb-6">
 Parrish Family Trucking provides professional step deck transportation
 services for construction equipment, industrial machinery, agricultural
-equipment, and oversized freight** across regional and interstate routes.
+equipment, and oversized freight across regional and interstate routes.
 </p>
 
 <a href="<?= BASE_URL ?>pages/contact.php"
@@ -205,6 +210,7 @@ with FMCSA transportation regulations.
 </div>
 </section>
 
+
 <!-- ================= FAQ ================= -->
 <section class="py-28 bg-[#0f0f0f]">
 <div class="max-w-5xl mx-auto px-6">
@@ -253,6 +259,93 @@ a lowboy or specialized heavy haul trailer.
 </div>
 </section>
 
+
+<!-- ================= INTERNAL SERVICE LINKS ================= -->
+<section class="py-24 bg-black border-t border-gray-800">
+<div class="max-w-6xl mx-auto px-6 text-center">
+
+<h2 class="text-4xl font-bold mb-10">
+Other Transportation Services
+</h2>
+
+<div class="grid md:grid-cols-3 gap-10">
+
+<a href="<?= BASE_URL ?>pages/services/flatbed.php" class="bg-[#111] p-8 rounded-xl border border-gray-800 hover:border-red-600 transition">
+<h3 class="text-lg font-semibold mb-2">Flatbed Transportation</h3>
+<p class="text-gray-400 text-sm">Open deck freight transport for oversized cargo.</p>
+</a>
+
+<a href="<?= BASE_URL ?>pages/services/wideload.php" class="bg-[#111] p-8 rounded-xl border border-gray-800 hover:border-red-600 transition">
+<h3 class="text-lg font-semibold mb-2">Oversized Load Hauling</h3>
+<p class="text-gray-400 text-sm">Specialized logistics for heavy and wide freight.</p>
+</a>
+
+<a href="<?= BASE_URL ?>pages/services/reefer.php" class="bg-[#111] p-8 rounded-xl border border-gray-800 hover:border-red-600 transition">
+<h3 class="text-lg font-semibold mb-2">Refrigerated Freight</h3>
+<p class="text-gray-400 text-sm">Temperature-controlled cargo transport.</p>
+</a>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= SERVICE AREA SEO ================= -->
+<section class="py-24 bg-[#0c0c0c]">
+<div class="max-w-5xl mx-auto px-6 text-center">
+
+<h2 class="text-4xl font-bold mb-10">
+Step Deck Trucking Across the Southern United States
+</h2>
+
+<p class="text-gray-400 mb-10">
+Parrish Family Trucking provides professional step deck freight
+transportation across major southern logistics corridors including:
+</p>
+
+<div class="grid md:grid-cols-5 gap-6 text-gray-300 font-semibold">
+
+<div>Texas</div>
+<div>Louisiana</div>
+<div>Arkansas</div>
+<div>Oklahoma</div>
+<div>Mississippi</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= CTA BANNER ================= -->
+<section class="relative py-28">
+
+<div class="absolute inset-0">
+<img src="<?= BASE_URL ?>assets/images/flatbed.webp"
+alt="Freight truck hauling industrial cargo across interstate highway"
+class="w-full h-full object-cover blur-sm">
+<div class="absolute inset-0 bg-black/80"></div>
+</div>
+
+<div class="relative max-w-4xl mx-auto text-center px-6">
+
+<h2 class="text-4xl md:text-5xl font-bold mb-6">
+Need Reliable Freight Transport?
+</h2>
+
+<p class="text-gray-300 text-lg mb-10">
+Request a freight quote today and let our logistics team
+handle your transportation needs.
+</p>
+
+<a href="<?= BASE_URL ?>pages/contact.php"
+class="bg-red-600 hover:bg-red-700 px-10 py-4 rounded-full font-semibold text-lg transition">
+Request A Quote
+</a>
+
+</div>
+</section>
 
 </div>
 

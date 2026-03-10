@@ -1,5 +1,5 @@
 <?php 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/pft-website/includes/config.php';
+require_once __DIR__ . '/../../includes/config.php';
 include BASE_PATH . 'includes/header.php';
 ?>
 
@@ -10,6 +10,10 @@ include BASE_PATH . 'includes/header.php';
 <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
 
 <div>
+
+<p class="text-red-500 text-sm uppercase tracking-[0.25em] mb-4">
+Nationwide Freight & Logistics
+</p>
 
 <h1 class="text-5xl font-extrabold mb-8 tracking-tight">
 Flatbed Transportation Services
@@ -27,24 +31,24 @@ energy operations across the United States.
 Flatbed trailers are designed for freight that cannot fit
 inside traditional enclosed trailers. Their open-deck
 design allows loading from the sides, rear, or top using
-cranes and forklifts, making them essential for large
-materials and heavy equipment logistics.
+cranes and forklifts.
 </p>
 
-<p class="text-gray-300 leading-relaxed">
+<p class="text-gray-300 leading-relaxed mb-8">
 If your business needs reliable heavy-haul freight
-movement, you can 
-<a href="/pft-website/pages/contact.php" class="text-red-500 underline">
-request a flatbed freight quote
-</a>
-from our logistics team today.
+movement, request a professional freight quote today.
 </p>
+
+<a href="<?= BASE_URL ?>pages/contact.php"
+class="inline-block bg-red-600 hover:bg-red-700 px-8 py-3 rounded-full text-white font-semibold transition">
+Get Flatbed Freight Quote
+</a>
 
 </div>
 
 <div>
 <img src="<?= BASE_URL ?>assets/images/flatbed.webp"
-alt="Flatbed trucking services transporting heavy freight"
+alt="Flatbed truck transporting heavy industrial cargo"
 class="rounded-2xl shadow-2xl">
 </div>
 
@@ -55,16 +59,14 @@ class="rounded-2xl shadow-2xl">
 <!-- ================= CORE CAPABILITIES ================= -->
 <section class="relative py-28">
 
-<!-- Background -->
 <div class="absolute inset-0">
 <img src="<?= BASE_URL ?>assets/images/stepdek3.webp"
 class="w-full h-full object-cover blur-sm scale-110"
-alt="Flatbed logistics background">
+alt="Flatbed transportation logistics background">
 
 <div class="absolute inset-0 bg-black/70"></div>
 </div>
 
-<!-- Content -->
 <div class="relative max-w-7xl mx-auto px-6 text-center">
 
 <h2 class="text-4xl font-extrabold mb-14">
@@ -102,7 +104,7 @@ Nationwide Coverage
 <p class="text-gray-200">
 Regional and long-haul flatbed freight solutions
 with logistics coordination and real-time shipment
-tracking.
+tracking across the United States.
 </p>
 </div>
 
@@ -110,6 +112,7 @@ tracking.
 
 </div>
 </section>
+
 
 <!-- ================= FREIGHT TYPES ================= -->
 <section class="py-24 bg-[#0d0d0d]">
@@ -122,10 +125,6 @@ Common Freight Transported on Flatbed Trailers
 <p class="text-gray-300 leading-relaxed mb-8 text-center">
 Flatbed transportation is ideal for cargo that
 exceeds the dimensional limits of enclosed trailers.
-Parrish Family Trucking regularly transports
-heavy machinery, construction materials,
-and large industrial equipment across
-long-distance freight routes.
 </p>
 
 <ul class="text-gray-300 grid md:grid-cols-2 gap-4 list-disc pl-6">
@@ -142,49 +141,66 @@ long-distance freight routes.
 </div>
 </section>
 
-<!-- ================= FAQ ================= -->
-<section class="py-24 bg-black">
-<div class="max-w-6xl mx-auto px-6">
 
-<h2 class="text-4xl font-bold mb-12 text-center">
-Flatbed Transportation FAQs
+<!-- ================= INTERNAL SERVICE LINKS ================= -->
+<section class="py-24 bg-black border-t border-gray-800">
+<div class="max-w-6xl mx-auto px-6 text-center">
+
+<h2 class="text-4xl font-bold mb-10">
+Other Transportation Services
 </h2>
 
-<div class="space-y-8">
-
-<div>
-<h3 class="text-xl font-semibold mb-2">
-What is flatbed trucking used for?
-</h3>
-<p class="text-gray-300">
-Flatbed trucking is used to transport oversized
-cargo, heavy equipment, construction materials,
-and industrial freight that cannot fit inside
-enclosed trailers.
+<p class="text-gray-300 mb-12">
+Parrish Family Trucking offers a full range of
+specialized freight transportation solutions
+to meet diverse logistics needs.
 </p>
-</div>
 
-<div>
-<h3 class="text-xl font-semibold mb-2">
-How are flatbed loads secured?
-</h3>
-<p class="text-gray-300">
-Loads are secured using heavy-duty straps,
-chains, binders, and tarping systems to
-prevent movement during transport.
-</p>
-</div>
+<div class="grid md:grid-cols-3 gap-8">
 
-<div>
-<h3 class="text-xl font-semibold mb-2">
-Do oversized flatbed shipments require permits?
+<a href="<?= BASE_URL ?>pages/services/stepdeck.php"
+class="bg-[#111] border border-gray-700 rounded-xl p-8 hover:border-red-600 transition">
+
+<h3 class="text-xl font-semibold mb-3 text-red-500">
+Step Deck Transport
 </h3>
-<p class="text-gray-300">
-Yes. Oversized loads often require special
-permits and route planning depending on
-weight, width, and height regulations.
+
+<p class="text-gray-400">
+Ideal for taller freight and equipment
+that exceeds standard trailer height limits.
 </p>
-</div>
+
+</a>
+
+
+<a href="<?= BASE_URL ?>pages/services/wideload.php"
+class="bg-[#111] border border-gray-700 rounded-xl p-8 hover:border-red-600 transition">
+
+<h3 class="text-xl font-semibold mb-3 text-red-500">
+Oversized Load Hauling
+</h3>
+
+<p class="text-gray-400">
+Specialized logistics for wide loads,
+heavy machinery, and oversized cargo.
+</p>
+
+</a>
+
+
+<a href="<?= BASE_URL ?>pages/services/reefer.php"
+class="bg-[#111] border border-gray-700 rounded-xl p-8 hover:border-red-600 transition">
+
+<h3 class="text-xl font-semibold mb-3 text-red-500">
+Refrigerated Freight
+</h3>
+
+<p class="text-gray-400">
+Temperature-controlled transportation
+for perishable and sensitive cargo.
+</p>
+
+</a>
 
 </div>
 
@@ -192,107 +208,67 @@ weight, width, and height regulations.
 </section>
 
 
-<!-- ================= SAFETY SECTION ================= -->
-<section class="relative py-32">
+<!-- ================= SERVICE AREA SEO ================= -->
+<section class="py-24 bg-[#0d0d0d]">
+<div class="max-w-5xl mx-auto px-6 text-center">
 
-<!-- Background -->
+<h2 class="text-4xl font-bold mb-10">
+Flatbed Trucking Across the Southern United States
+</h2>
+
+<p class="text-gray-300 leading-relaxed mb-10">
+Parrish Family Trucking provides reliable flatbed
+freight transportation across major logistics
+corridors in the southern United States.
+</p>
+
+<div class="grid md:grid-cols-5 gap-6 text-gray-300 font-semibold">
+
+<div>Texas</div>
+<div>Louisiana</div>
+<div>Arkansas</div>
+<div>Oklahoma</div>
+<div>Mississippi</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= CTA BANNER ================= -->
+<section class="relative py-28">
+
 <div class="absolute inset-0">
 <img src="<?= BASE_URL ?>assets/images/flatbed3.webp"
 class="w-full h-full object-cover blur-md scale-110"
-alt="Flatbed truck safety">
+alt="Freight transportation background">
 
 <div class="absolute inset-0 bg-black/80"></div>
 </div>
 
-<!-- Content -->
-<div class="relative max-w-7xl mx-auto px-6">
+<div class="relative max-w-5xl mx-auto text-center px-6">
 
-<h2 class="text-4xl md:text-5xl font-bold text-center mb-16">
-Safety, Compliance & Load Protection
+<h2 class="text-4xl md:text-5xl font-bold mb-6">
+Need Reliable Freight Transport?
 </h2>
 
-<div class="grid md:grid-cols-3 gap-10">
-
-<!-- Card 1 -->
-<div class="bg-white/5 backdrop-blur-md border border-gray-700 rounded-2xl p-8 hover:scale-105 transition duration-500">
-
-<div class="w-14 h-14 flex items-center justify-center rounded-full bg-red-600 mb-6">
-
-<svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-<path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-d="M9 12l2 2 4-4m5-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-</svg>
-
-</div>
-
-<h3 class="text-xl font-semibold mb-3">
-DOT Compliance
-</h3>
-
-<p class="text-gray-300 leading-relaxed">
-All shipments follow Department of Transportation
-safety standards and are handled by licensed CDL
-drivers trained in heavy freight logistics and
-equipment inspection.
+<p class="text-gray-300 text-lg mb-10">
+Our logistics team is ready to provide safe,
+efficient, and nationwide flatbed freight
+transportation solutions.
 </p>
 
-</div>
-
-<!-- Card 2 -->
-<div class="bg-white/5 backdrop-blur-md border border-gray-700 rounded-2xl p-8 hover:scale-105 transition duration-500">
-
-<div class="w-14 h-14 flex items-center justify-center rounded-full bg-red-600 mb-6">
-
-<svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-<path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-d="M3 10h18M7 15h1m4 0h5M5 6h14l1 4H4l1-4z"/>
-</svg>
-
-</div>
-
-<h3 class="text-xl font-semibold mb-3">
-Professional Load Securement
-</h3>
-
-<p class="text-gray-300 leading-relaxed">
-Heavy-duty chains, straps, binders, edge protectors,
-and tarping systems ensure cargo remains stable and
-protected throughout long-distance transportation.
-</p>
-
-</div>
-
-<!-- Card 3 -->
-<div class="bg-white/5 backdrop-blur-md border border-gray-700 rounded-2xl p-8 hover:scale-105 transition duration-500">
-
-<div class="w-14 h-14 flex items-center justify-center rounded-full bg-red-600 mb-6">
-
-<svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-<path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-d="M12 8c-3 0-5 2-5 4s2 4 5 4 5-2 5-4-2-4-5-4z"/>
-<path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-d="M12 2v2m0 16v2m8-10h2M2 12h2"/>
-</svg>
-
-</div>
-
-<h3 class="text-xl font-semibold mb-3">
-Oversized Freight Planning
-</h3>
-
-<p class="text-gray-300 leading-relaxed">
-We coordinate route planning, transportation permits,
-and escort vehicles when required to maintain full
-regulatory compliance for heavy-haul freight.
-</p>
-
-</div>
-
-</div>
+<a href="<?= BASE_URL ?>pages/contact.php"
+class="bg-red-600 hover:bg-red-700 px-10 py-4 rounded-full text-lg font-semibold transition">
+Request A Freight Quote
+</a>
 
 </div>
 </section>
+
 </div>
+
 
 <!-- ================= FAQ SCHEMA ================= -->
 <script type="application/ld+json">
